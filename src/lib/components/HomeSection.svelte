@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { ArrowDown } from 'lucide-svelte'
   
   let isVisible = false;
   
@@ -39,10 +40,8 @@
             Posłuchaj
         </button>
         </div>
-
       </div>
     </div>
-
   </div>
 
   {#snippet navElem(title: string, href: string)}
@@ -50,7 +49,7 @@
   {/snippet}
 
   <!-- Nawigacja -->
-  <div class="absolute bottom-10 left-0 right-0 z-10">
+  <div class="max-sm:hidden absolute bottom-10 left-0 right-0 z-10">
     <nav class="container mx-auto px-4">
       <ul class="flex justify-center space-x-6 md:space-x-10">
         <!-- {@render navElem('Strona Główna', '#home')} -->
@@ -60,17 +59,12 @@
         {@render navElem('Media', '#media')}
         {@render navElem('Merch', '#merch')}
         {@render navElem('Kontakt', '#contact')}
-
-        <!-- <li><a href="#home" class="nav-link text-white hover:text-accent-silver">Strona Główna</a></li> -->
-        <!-- <li><a href="#about" class="nav-link text-white hover:text-accent-silver">O Nas</a></li>
-        <li><a href="#music" class="nav-link text-white hover:text-accent-silver">Muzyka</a></li>
-        <li><a href="#shows" class="nav-link text-white hover:text-accent-silver">Koncerty</a></li>
-        <li><a href="#media" class="nav-link text-white hover:text-accent-silver">Media</a></li>
-        <li><a href="#merch" class="nav-link text-white hover:text-accent-silver">Merch</a></li>
-        <li><a href="#contact" class="nav-link text-white hover:text-accent-silver">Kontakt</a></li> -->
       </ul>
     </nav>
   </div>
+  <button class="md:hidden border border-gray-500 absolute bottom-5 rounded-full left-1/2 -translate-x-1/2 text-white text-4xl animate-[bounce_2s_ease-in-out_infinite] bg-black size-12">
+    <ArrowDown class="m-auto" />
+  </button>
 </section>
 
 <!-- <section id="home" class="section relative h-screen flex items-center justify-center overflow-hidden">
