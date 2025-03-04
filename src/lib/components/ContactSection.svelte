@@ -1,7 +1,9 @@
 <script lang="ts">
+  import { preventDefault } from 'svelte/legacy';
+
   import { onMount } from 'svelte';
   
-  let isVisible = false;
+  let isVisible = $state(false);
   
   onMount(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -20,10 +22,10 @@
     };
   });
   
-  let name = '';
-  let email = '';
-  let message = '';
-  let submitted = false;
+  let name = $state('');
+  let email = $state('');
+  let message = $state('');
+  let submitted = $state(false);
   
   function handleSubmit() {
     // In a real application, you would send the form data to a server
@@ -63,7 +65,7 @@
             </div>
           {/if}
           
-          <form on:submit|preventDefault={handleSubmit} class="space-y-6">
+          <form onsubmit={preventDefault(handleSubmit)} class="space-y-6">
             <div>
               <label for="name" class="block text-white mb-2">Imię i nazwisko</label>
               <input 

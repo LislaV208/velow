@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   
-  let isVisible = false;
+  let isVisible = $state(false);
   
   onMount(() => {
     const observer = new IntersectionObserver((entries) => {

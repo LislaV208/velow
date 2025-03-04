@@ -2,8 +2,8 @@
   import { onMount } from 'svelte';
   
   let scrollY: number;
-  let isScrolled = false;
-  let isVisible = false;
+  let isScrolled = $state(false);
+  let isVisible = $state(false);
   
   onMount(() => {
     const handleScroll = () => {

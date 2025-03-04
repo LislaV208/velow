@@ -14,8 +14,8 @@
     { title: "Powrót", duration: "4:28", isHighlighted: false }
   ];
   
-  let isVisible = false;
-  let activeTrack = 0;
+  let isVisible = $state(false);
+  let activeTrack = $state(0);
   
   function setActiveTrack(index) {
     activeTrack = index;
@@ -101,8 +101,8 @@
             {#each albumTracks as track, i}
               <div 
                 class={`p-4 rounded-lg transition-all duration-300 cursor-pointer ${i === activeTrack ? 'bg-accent-silver/20 border-l-4 border-accent-silver' : 'bg-gray-900/50 hover:bg-gray-800/50'}`}
-                on:click={() => setActiveTrack(i)}
-                on:keydown={(e) => e.key === 'Enter' && setActiveTrack(i)}
+                onclick={() => setActiveTrack(i)}
+                onkeydown={(e) => e.key === 'Enter' && setActiveTrack(i)}
                 tabindex="0"
                 role="button"
               >

@@ -28,9 +28,9 @@
     }
   ];
   
-  let selectedVideo = videos[0];
-  let isGalleryVisible = false;
-  let isVideoVisible = false;
+  let selectedVideo = $state(videos[0]);
+  let isGalleryVisible = $state(false);
+  let isVideoVisible = $state(false);
   
   function selectVideo(video) {
     selectedVideo = video;
@@ -94,8 +94,8 @@
             {#each videos as video, i}
               <div 
                 class={`p-2 rounded-lg cursor-pointer transition-all duration-300 ${selectedVideo === video ? 'bg-accent-red/20 border-l-4 border-accent-red' : 'bg-gray-900/50 hover:bg-gray-800/50'}`}
-                on:click={() => selectVideo(video)}
-                on:keydown={(e) => e.key === 'Enter' && selectVideo(video)}
+                onclick={() => selectVideo(video)}
+                onkeydown={(e) => e.key === 'Enter' && selectVideo(video)}
                 tabindex="0"
                 role="button"
                 style="transition-delay: {i * 100}ms"
