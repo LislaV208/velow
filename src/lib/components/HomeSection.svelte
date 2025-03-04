@@ -28,9 +28,9 @@
     <div class="container mx-auto px-4 text-center z-10">
       <div class="max-w-4xl mx-auto">
         <!-- Tekst i przycisk -->
-        <div class="relative max-[2000px]:top-[18vh] top-[40vh]">
-          <h1 class="text-8xl 2xl:text-9xl font-bold text-white mb-4">VELOW</h1>
-          <p class="text-2xl 2xl:text-4xl text-gray-300 mb-10">
+        <div class="relative max-[1000px]:top-[12vh] max-[2000px]:top-[18vh] top-[40vh]">
+          <h1 class="text-6xl md:text-8xl 2xl:text-9xl font-bold text-white mb-4">VELOW</h1>
+          <p class="text-lg 2xl:text-4xl text-gray-300 mb-10">
             Polski zespół rockowy, który łączy 
             <span class="font-semibold text-white">surową energię</span> 
             z <span class="font-semibold text-white">melodyjnymi kompozycjami</span>
@@ -45,17 +45,29 @@
 
   </div>
 
+  {#snippet navElem(title: string, href: string)}
+    <li><a href={href} class="nav-link sm:text-md md:text-md lg:text-xl text-white hover:text-accent-silver">{title}</a></li>
+  {/snippet}
+
   <!-- Nawigacja -->
   <div class="absolute bottom-10 left-0 right-0 z-10">
     <nav class="container mx-auto px-4">
       <ul class="flex justify-center space-x-6 md:space-x-10">
+        <!-- {@render navElem('Strona Główna', '#home')} -->
+        {@render navElem('O Nas', '#about')}
+        {@render navElem('Muzyka', '#music')}
+        {@render navElem('Koncerty', '#shows')}
+        {@render navElem('Media', '#media')}
+        {@render navElem('Merch', '#merch')}
+        {@render navElem('Kontakt', '#contact')}
+
         <!-- <li><a href="#home" class="nav-link text-white hover:text-accent-silver">Strona Główna</a></li> -->
-        <li><a href="#about" class="nav-link text-white hover:text-accent-silver">O Nas</a></li>
+        <!-- <li><a href="#about" class="nav-link text-white hover:text-accent-silver">O Nas</a></li>
         <li><a href="#music" class="nav-link text-white hover:text-accent-silver">Muzyka</a></li>
         <li><a href="#shows" class="nav-link text-white hover:text-accent-silver">Koncerty</a></li>
         <li><a href="#media" class="nav-link text-white hover:text-accent-silver">Media</a></li>
         <li><a href="#merch" class="nav-link text-white hover:text-accent-silver">Merch</a></li>
-        <li><a href="#contact" class="nav-link text-white hover:text-accent-silver">Kontakt</a></li>
+        <li><a href="#contact" class="nav-link text-white hover:text-accent-silver">Kontakt</a></li> -->
       </ul>
     </nav>
   </div>
