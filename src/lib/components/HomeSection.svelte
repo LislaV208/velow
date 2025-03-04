@@ -28,16 +28,16 @@
     <div class="container mx-auto px-4 text-center z-10">
       <div class="max-w-4xl mx-auto">
         <!-- Tekst i przycisk -->
-        <div class="relative max-[2000px]:top-[20vh] top-[40vh]">
-          <h1 class="text-8xl 2xl:text-9xl  font-bold text-white mb-4">VELOW</h1>
-          <p class="text-2xl md:text-3xl text-gray-300 mb-10">
+        <div class="relative max-[2000px]:top-[18vh] top-[40vh]">
+          <h1 class="text-8xl 2xl:text-9xl font-bold text-white mb-4">VELOW</h1>
+          <p class="text-2xl 2xl:text-4xl text-gray-300 mb-10">
             Polski zespół rockowy, który łączy 
             <span class="font-semibold text-white">surową energię</span> 
             z <span class="font-semibold text-white">melodyjnymi kompozycjami</span>
           </p>
-          <a href="#music" class="inline-block px-6 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition">
+          <button class="px-8 py-3 bg-black text-xl 2xl:text-2xl text-white border border-gray-400 rounded-md  transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
             Posłuchaj
-          </a>
+        </button>
         </div>
 
       </div>

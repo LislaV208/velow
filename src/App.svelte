@@ -12,14 +12,14 @@
 </script>
 
 <main>
-  <Header />
+  <!-- <Header /> -->
   <HomeSection />
-  <AboutSection />
+  <!-- <AboutSection />
   <MusicSection />
   <ShowsSection />
   <MediaSection />
   <MerchSection />
   <SocialSection />
   <ContactSection />
-  <Footer />
+  <Footer /> -->
 </main>
