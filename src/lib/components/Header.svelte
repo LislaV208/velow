@@ -1,0 +1,50 @@
+<script lang="ts">
+  import { onMount } from 'svelte';
+  
+  let scrollY: number;
+  let isScrolled = false;
+  let isVisible = false;
+  
+  onMount(() => {
+    const handleScroll = () => {
+      scrollY = window.scrollY;
+      isScrolled = scrollY > 100;
+      isVisible = scrollY > window.innerHeight * 0.7; // Show after 70% of first screen
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
+</script>
+
+<header class={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-black/90 backdrop-blur-md py-3' : 'bg-transparent py-5'} ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    <a href="#home" class="text-white text-3xl font-heading font-bold tracking-wider relative overflow-hidden group">
+      <span class="relative z-10 inline-block transition-transform duration-300 group-hover:scale-110">VELOW</span>
+      <span class="absolute bottom-0 left-0 w-full h-0.5 bg-accent-silver transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+    </a>
+    
+    <nav class="hidden md:block">
+      <ul class="flex space-x-8">
+        <li><a href="#home" class="nav-link text-white hover:text-accent-silver">Strona Główna</a></li>
+        <li><a href="#about" class="nav-link text-white hover:text-accent-silver">O Nas</a></li>
+        <li><a href="#music" class="nav-link text-white hover:text-accent-silver">Muzyka</a></li>
+        <li><a href="#shows" class="nav-link text-white hover:text-accent-silver">Koncerty</a></li>
+        <li><a href="#media" class="nav-link text-white hover:text-accent-silver">Media</a></li>
+        <li><a href="#merch" class="nav-link text-white hover:text-accent-silver">Merch</a></li>
+        <li><a href="#contact" class="nav-link text-white hover:text-accent-silver">Kontakt</a></li>
+      </ul>
+    </nav>
+    
+    <button class="md:hidden text-white relative z-10 w-10 h-10 flex items-center justify-center" aria-label="Menu">
+      <div class="w-6 flex flex-col items-center justify-center">
+        <span class="block w-full h-0.5 bg-white mb-1.5 transition-all duration-300"></span>
+        <span class="block w-full h-0.5 bg-white mb-1.5 transition-all duration-300"></span>
+        <span class="block w-3/4 h-0.5 bg-white transition-all duration-300 self-end"></span>
+      </div>
+    </button>
+  </div>
+</header>

@@ -1,0 +1,11 @@
+This directory will contain the following placeholder images:
+- velow-logo.png (band logo)
+- band-bg.jpg (background image for home section)
+- band-about.jpg (band photo for about section)
+- member1.jpg, member2.jpg, member3.jpg, member4.jpg (band member photos)
+- album-cover.jpg (album cover art)
+- gallery1.jpg through gallery6.jpg (gallery photos)
+- video-thumb1.jpg, video-thumb2.jpg, video-thumb3.jpg (video thumbnails)
+- merch-tshirt1.jpg, merch-tshirt2.jpg, merch-hoodie.jpg, merch-cd.jpg, merch-vinyl.jpg, merch-bag.jpg (merchandise photos)
+
+Note: In a real implementation, you would need to add actual image files here. For this example, we're using this placeholder file to indicate where images would be stored.
