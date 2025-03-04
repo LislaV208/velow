@@ -1,10 +1,8 @@
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
+import tailwindcss from '@tailwindcss/vite';
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [svelte()],
-  css: {
-    postcss: './postcss.config.js', // Wskaż plik konfiguracyjny PostCSS, jeśli istnieje
-  },
+  plugins: [tailwindcss(), svelte()],
 })
