@@ -12,10 +12,10 @@
 </script>
 
 <main>
-  <!-- <Header /> -->
+  <Header />
   <HomeSection />
-  <!-- <AboutSection />
-  <MusicSection />
+  <AboutSection />
+  <!-- <MusicSection />
   <ShowsSection />
   <MediaSection />
   <MerchSection />

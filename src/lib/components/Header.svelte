@@ -8,8 +8,8 @@
   onMount(() => {
     const handleScroll = () => {
       scrollY = window.scrollY;
-      isScrolled = scrollY > 100;
-      isVisible = scrollY > window.innerHeight * 0.7; // Show after 70% of first screen
+      isScrolled = scrollY > 0;
+      isVisible = scrollY > window.innerHeight * 0.88; // Show after 70% of first screen
     };
     
     window.addEventListener('scroll', handleScroll);
@@ -20,10 +20,10 @@
   });
 </script>
 
-<header class={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-black/90 backdrop-blur-md py-3' : 'bg-transparent py-5'} ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+<header class={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-black border-2 border-black border-b-white/20 py-5' : 'bg-transparent'} ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
   <div class="container mx-auto px-4 flex justify-between items-center">
-    <a href="#home" class="text-white text-3xl font-heading font-bold tracking-wider relative overflow-hidden group">
-      <span class="relative z-10 inline-block transition-transform duration-300 group-hover:scale-110">VELOW</span>
+    <a href="#home" class="text-white text-3xl font-bold relative tracking-wider overflow-hidden group">
+      <h1 class="relative z-10 inline-block transition-transform duration-300 group-hover:scale-110">VELOW</h1>
       <span class="absolute bottom-0 left-0 w-full h-0.5 bg-accent-silver transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
     </a>
     
