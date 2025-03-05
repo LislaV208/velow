@@ -8,8 +8,10 @@
   onMount(() => {
     const handleScroll = () => {
       scrollY = window.scrollY;
-      isScrolled = scrollY > 0;
-      isVisible = scrollY > window.innerHeight * 0.88; // Show after 70% of first screen
+      // console.log('scrollY: ' + scrollY + 'px');
+      // isScrolled = scrollY > 777;
+      isScrolled = true;
+      isVisible = scrollY > window.innerHeight * 0.88; 
     };
     
     window.addEventListener('scroll', handleScroll);

@@ -15,7 +15,8 @@
 <section class="relative min-h-screen flex flex-col">
   <!-- Tło -->
   <div class="absolute inset-0">
-    <div class="absolute inset-0 bg-cover 2xl:bg-[auto_100%] bg-no-repeat bg-[center_100%] opacity-50" style="background-image: url('/images/home.jpg')"></div>
+    <!-- <div class="absolute inset-0 bg-cover 2xl:bg-[auto_100%] bg-no-repeat bg-[center_100%] opacity-50" style="background-image: url('/images/home.jpg')"></div> -->
+    <div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('/images/home.jpg')"></div>
     <!-- <div class="absolute inset-0 bg-cover 2xl:bg-[auto_100%] bg-no-repeat bg-center opacity-50" style="background-image: url('/images/home.jpg')"></div> -->
     <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/70"></div>
     <!-- <div class="absolute inset-0 max-[2048px]:hidden min-[2048px]:w-[2048px] left-1/2 -translate-x-1/2">
@@ -46,7 +47,7 @@
   </div>
 
   {#snippet navElem(title: string, href: string)}
-    <li><a href={href} class="nav-link sm:text-md md:text-md lg:text-xl text-white hover:text-accent-silver">{title}</a></li>
+    <li><a href={href} class="nav-link sm:text-md md:text-md lg:text-xl 2xl:text-5xl text-white hover:text-accent-silver">{title}</a></li>
   {/snippet}
 
   <!-- Nawigacja -->

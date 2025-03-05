@@ -8,6 +8,10 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           isVisible = true;
+          console.log('visible');
+        } else {
+          isVisible = false;
+          console.log('hidden');
         }
       });
     }, { threshold: 0.1 });
@@ -53,19 +57,36 @@
   <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent"></div>
   
   <div class="container mx-auto px-4 relative z-10">
-    <div class={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+    <div class={`transition-all duration-800 delay-50 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <h2 class="section-title text-white">O Nas</h2>
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
         <div>
           <p class="text-gray-300 mb-6 text-lg">
-            Velow to polski zespół rockowy założony w 2017 roku w Warszawie. Nasza muzyka to połączenie surowej energii rocka alternatywnego z melodyjnymi kompozycjami i tekstami, które opowiadają o życiowych doświadczeniach, emocjach i społecznych obserwacjach.
+            Velow to powstały w roku 2021 zespół, muzycznie będący 
+w klimatach rocka alternatywnego. Po pierwszych, bardzo intensywnych
+dwóch latach działalności, miało miejsce nasze pierwsze wyjście z mroku z 
+naszym debiutanckim albumem pod tytułem “Wizje”,
+który przyjął się bardzo dobrze w środowisku. Razem z premierą,
+w 2023 wyruszyliśmy w trasę “Wizje Tour”, odwiedzając takie miasta jak
+Szczecin, Gdańsk, Poznań. Nasza muzyka to pewna opowieść. 
+To enigmatyczne teksty, które w połączeniu z energiczną
+muzyką tworzą mieszankę wybuchową. 
+
           </p>
           <p class="text-gray-300 mb-6 text-lg">
-            Przez lata koncertowaliśmy w całej Polsce, dzieląc scenę z wieloma uznanymi artystami. Nasz debiutancki album <span class="text-accent-red font-semibold">"Pierwszy Krok"</span> został wydany w 2022 roku i spotkał się z ciepłym przyjęciem zarówno fanów, jak i krytyków.
+            Mamy za sobą dwukrotny występ na Szczecińskich Juwenaliach, w naszej
+dotychczasowej karierze graliśmy między innymi przed takimi zespołami
+jak: Lady Pank, Kult, Enej, Organek
+
           </p>
-          <p class="text-gray-300 text-lg">
-            Obecnie pracujemy nad nowym materiałem, który będzie jeszcze bardziej dojrzały i zróżnicowany. Nasze występy na żywo to zawsze gwarancja potężnego brzmienia i niezapomnianej energii.
+          <p class="text-gray-300 text-md">
+            "Jeśli takie są "Wizje" przyszłości polskiego rocka, to jest dobrze, 
+naprawdę dobrze!" - EskaROCK
+"Velow bywają i czadowi (przewrotna Smutna Piosenka), i refleksyjni 
+(Mimo Strat, Miasto pełne krzyku). I w każdym wcieleniu im do twarzy"
+ - TerazROCK
+
           </p>
           
           <div class="mt-8 inline-block">
