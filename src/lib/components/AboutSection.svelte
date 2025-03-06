@@ -1,7 +1,12 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import emblaCarouselSvelte from 'embla-carousel-svelte'
+  import Autoplay from 'embla-carousel-autoplay'
   
   let isVisible = $state(false);
+
+  let options = {};
+  let plugins = [Autoplay({stopOnInteraction:false, delay: 8000, stopOnFocusIn: true})]
   
   onMount(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -26,28 +31,34 @@
   
   const bandMembers = [
     {
-      name: "Jan Kowalski",
-      role: "Wokal / Gitara",
-      image: "/images/member1.jpg",
-      bio: "Założyciel zespołu, autor większości tekstów. Inspiruje się klasykami rocka lat 90."
+      name: "Eryk",
+      role: "Wokal",
+      image: "/images/eryk.JPG",
+      bio: "Czasem coś murknie do mikrofonu, czasem ryknie - a czasem spawa kurczaki"
     },
     {
-      name: "Piotr Nowak",
-      role: "Gitara prowadząca",
-      image: "/images/member2.jpg",
-      bio: "W zespole od 2018 roku. Wirtuoz gitary z klasycznym wykształceniem muzycznym."
+      name: "Tomek",
+      role: "Gitara",
+      image: "/images/tomek.jpg",
+      bio: "Koleś git(arzysta), zespołowy ogarniacz i polski Mr. Beast"
     },
     {
-      name: "Michał Wiśniewski",
+      name: "Lisu",
+      role: "Gitara",
+      image: "/images/lisu.jpg",
+      bio: "Jeżeli wybierasz się na jakikolwiek koncert to masz 50% szans na to, że pojawi się na scenie"
+    },
+    {
+      name: "Wiktor",
       role: "Bas",
-      image: "/images/member3.jpg",
-      bio: "Odpowiedzialny za groove zespołu. Wcześniej grał w kilku undergroundowych projektach."
+      image: "/images/wiktor.jpg",
+      bio: "Fanki do niego lgną, ale koszulki niekoniecznie. Sigma Skidibi Nike Pro"
     },
     {
-      name: "Tomasz Jankowski",
+      name: "Krystian",
       role: "Perkusja",
-      image: "/images/member4.jpg",
-      bio: "Najmłodszy członek zespołu. Znany z energetycznych występów na żywo."
+      image: "/images/krystian.jpg",
+      bio: "Jego ulubiony utwór to: Metronome - 120bpm"
     }
   ];
 </script>
@@ -60,51 +71,70 @@
     <div class={`transition-all duration-800 delay-50 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <h2 class="section-title text-white">O Nas</h2>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
-        <div>
+      <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16"> -->
+      <div class="flex max-sm:flex-col flex-row gap-10 mb-16">
+        <div class="flex-2">
           <p class="text-gray-300 mb-6 text-lg">
-            Velow to powstały w roku 2021 zespół, muzycznie będący 
-w klimatach rocka alternatywnego. Po pierwszych, bardzo intensywnych
-dwóch latach działalności, miało miejsce nasze pierwsze wyjście z mroku z 
-naszym debiutanckim albumem pod tytułem “Wizje”,
-który przyjął się bardzo dobrze w środowisku. Razem z premierą,
-w 2023 wyruszyliśmy w trasę “Wizje Tour”, odwiedzając takie miasta jak
-Szczecin, Gdańsk, Poznań. Nasza muzyka to pewna opowieść. 
-To enigmatyczne teksty, które w połączeniu z energiczną
-muzyką tworzą mieszankę wybuchową. 
-
+            Velow to powstały w roku 2021 zespół, muzycznie będący w klimatach rocka alternatywnego. Po pierwszych, bardzo intensywnych dwóch latach działalności, miało miejsce nasze pierwsze wyjście z mroku z naszym debiutanckim albumem pod tytułem “Wizje”, który przyjął się bardzo dobrze w środowisku. Razem z premierą, w 2023 wyruszyliśmy w trasę “Wizje Tour”, odwiedzając takie miasta jak Szczecin, Gdańsk, Poznań. Nasza muzyka to pewna opowieść. To enigmatyczne teksty, które w połączeniu z energiczną muzyką tworzą mieszankę wybuchową. 
           </p>
           <p class="text-gray-300 mb-6 text-lg">
-            Mamy za sobą dwukrotny występ na Szczecińskich Juwenaliach, w naszej
-dotychczasowej karierze graliśmy między innymi przed takimi zespołami
-jak: Lady Pank, Kult, Enej, Organek
-
+            Mamy za sobą dwukrotny występ na Szczecińskich Juwenaliach, w naszej dotychczasowej karierze graliśmy między innymi przed takimi zespołami jak: Lady Pank, Kult, Enej, Organek
           </p>
           <p class="text-gray-300 text-md">
-            "Jeśli takie są "Wizje" przyszłości polskiego rocka, to jest dobrze, 
-naprawdę dobrze!" - EskaROCK
-"Velow bywają i czadowi (przewrotna Smutna Piosenka), i refleksyjni 
-(Mimo Strat, Miasto pełne krzyku). I w każdym wcieleniu im do twarzy"
- - TerazROCK
-
+            "Jeśli takie są "Wizje" przyszłości polskiego rocka, to jest dobrze, naprawdę dobrze!" - EskaROCK "Velow bywają i czadowi (przewrotna Smutna Piosenka), i refleksyjni (Mimo Strat, Miasto pełne krzyku). I w każdym wcieleniu im do twarzy" - TerazROCK
           </p>
           
           <div class="mt-8 inline-block">
-            <a href="#music" class="btn border-accent-red text-accent-red hover:text-black">
+            <a href="#music" class="btn hover:text-black">
               Posłuchaj naszej muzyki
             </a>
           </div>
         </div>
-        <div class="relative">
-          <div class="absolute -inset-4 bg-gradient-to-r from-accent-red to-transparent opacity-10 blur-lg"></div>
+        <div class="flex-1 embla " use:emblaCarouselSvelte="{{options, plugins}}">
+            <div class="embla__container">
+              {#each bandMembers as member, i}
+              <div class="{i < bandMembers.length - 1 ? 'mr-5' : 'mr-0'} embla__slide card p-5 rounded-lg bg-black/50 backdrop-blur-sm">
+                <div class="relative mb-4 overflow-hidden rounded-lg aspect-square">
+                  <!-- <img src={member.image} alt={member.name} class="w-full h-full object-cover grayscale"> -->
+                  <img src={member.image} alt={member.name} class="w-full h-full object-cover grayscale"
+                  style="object-position: center {member.name === 'Eryk' ? '70%' : member.name === 'Lisu' ? '0%': member.name === 'Wiktor' ? '30%' : member.name === 'Krystian' ? '30%' : '50%'}"
+                  >
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                  <div class="absolute bottom-0 left-0 w-full p-3">
+                    <h4 class="text-xl text-white">{member.name}</h4>
+                    <p class="text-sm">{member.role}</p>
+                  </div>
+                </div>
+                <p class="text-gray-400 text-sm">{member.bio}</p>
+              </div>
+            {/each}
+            </div>
+          <!-- </div> -->
+          <!-- <div class="absolute -inset-4 bg-gradient-to-r from-accent-red to-transparent opacity-10 blur-lg"></div>
           <img src="/images/band-about.jpg" alt="Zespół Velow" class="w-full h-auto rounded-lg shadow-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div> -->
+          <!-- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {#each bandMembers as member, i}
+              <div class="card p-5 rounded-lg bg-black/50 backdrop-blur-sm" style="transition-delay: {i * 100}ms">
+                <div class="relative mb-4 overflow-hidden rounded-lg aspect-square">
+                  <img src={member.image} alt={member.name} class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                  <div class="absolute bottom-0 left-0 w-full p-3">
+                    <h4 class="text-xl font-heading text-white mb-0">{member.name}</h4>
+                    <p class="text-accent-red text-sm">{member.role}</p>
+                  </div>
+                </div>
+                <p class="text-gray-400 text-sm">{member.bio}</p>
+              </div>
+            {/each}
+          </div> -->
+          
         </div>
       </div>
+
+
       
-      <h3 class="text-3xl font-heading text-white mb-10 relative inline-block distortion-border pb-3">Członkowie zespołu</h3>
-      
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {#each bandMembers as member, i}
           <div class="card p-5 rounded-lg bg-black/50 backdrop-blur-sm" style="transition-delay: {i * 100}ms">
             <div class="relative mb-4 overflow-hidden rounded-lg aspect-square">
@@ -118,7 +148,7 @@ naprawdę dobrze!" - EskaROCK
             <p class="text-gray-400 text-sm">{member.bio}</p>
           </div>
         {/each}
-      </div>
+      </div> -->
     </div>
   </div>
   
