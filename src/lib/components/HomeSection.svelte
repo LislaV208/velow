@@ -57,6 +57,6 @@
     </nav>
   </div>
   <button class="sm:hidden border border-gray-500 absolute bottom-5 rounded-full left-1/2 -translate-x-1/2 text-white text-4xl animate-[bounce_2s_ease-in-out_infinite] bg-black size-12">
-    <ArrowDown class="m-auto" />
+    <a href="#about"><ArrowDown class="m-auto" /></a>
   </button>
 </section>

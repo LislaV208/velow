@@ -47,3 +47,4 @@ vite.config.ts.timestamp-*
 
 # Coverage directory used by tools like istanbul
 coverage
+.vercel
