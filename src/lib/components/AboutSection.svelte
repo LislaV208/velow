@@ -63,28 +63,28 @@
   ];
 </script>
 
-<section id="about" class="section bg-gradient-to-b from-black via-gray-900 to-black py-20 relative">
+<section id="about" class="max-sm:px-1! section bg-gradient-to-b from-black via-gray-900 to-black py-20 relative">
   <div class="absolute inset-0 bg-noise-pattern opacity-10"></div>
   <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent"></div>
   
   <div class="container mx-auto px-4 relative z-10">
     <div class={`transition-all duration-800 delay-50 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-      <h2 class="section-title text-white">O Nas</h2>
+      <h2 class="text-5xl! section-title text-white">O Nas</h2>
       
       <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16"> -->
       <div class="flex max-sm:flex-col flex-row gap-10 mb-16">
         <div class="flex-2">
-          <p class="text-gray-300 mb-6 text-lg">
+          <p class="text-gray-300 mb-6 max-sm:text-md md:text-lg">
             Velow to powstały w roku 2021 zespół, muzycznie będący w klimatach rocka alternatywnego. Po pierwszych, bardzo intensywnych dwóch latach działalności, miało miejsce nasze pierwsze wyjście z mroku z naszym debiutanckim albumem pod tytułem “Wizje”, który przyjął się bardzo dobrze w środowisku. Razem z premierą, w 2023 wyruszyliśmy w trasę “Wizje Tour”, odwiedzając takie miasta jak Szczecin, Gdańsk, Poznań. Nasza muzyka to pewna opowieść. To enigmatyczne teksty, które w połączeniu z energiczną muzyką tworzą mieszankę wybuchową. 
           </p>
-          <p class="text-gray-300 mb-6 text-lg">
+          <p class="text-gray-300 mb-6 max-sm:text-md md:text-lg">
             Mamy za sobą dwukrotny występ na Szczecińskich Juwenaliach, w naszej dotychczasowej karierze graliśmy między innymi przed takimi zespołami jak: Lady Pank, Kult, Enej, Organek
           </p>
-          <p class="text-gray-300 text-md">
+          <p class="text-gray-300 sm:text-md md:text-lg">
             "Jeśli takie są "Wizje" przyszłości polskiego rocka, to jest dobrze, naprawdę dobrze!" - EskaROCK "Velow bywają i czadowi (przewrotna Smutna Piosenka), i refleksyjni (Mimo Strat, Miasto pełne krzyku). I w każdym wcieleniu im do twarzy" - TerazROCK
           </p>
           
-          <div class="mt-8 inline-block">
+          <div class="mt-8 flex justify-center w-full">
             <a href="#music" class="btn hover:text-black">
               Posłuchaj naszej muzyki
             </a>
