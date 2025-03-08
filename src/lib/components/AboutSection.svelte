@@ -80,9 +80,17 @@
           <p class="text-gray-300 mb-6 max-sm:text-md md:text-lg">
             Mamy za sobą dwukrotny występ na Szczecińskich Juwenaliach, w naszej dotychczasowej karierze graliśmy między innymi przed takimi zespołami jak: Lady Pank, Kult, Enej, Organek
           </p>
-          <p class="text-gray-300 sm:text-md md:text-lg">
-            "Jeśli takie są "Wizje" przyszłości polskiego rocka, to jest dobrze, naprawdę dobrze!" - EskaROCK "Velow bywają i czadowi (przewrotna Smutna Piosenka), i refleksyjni (Mimo Strat, Miasto pełne krzyku). I w każdym wcieleniu im do twarzy" - TerazROCK
-          </p>
+          
+          <blockquote class="border-l-4 border-accent-silver pl-4 py-2 my-6 bg-black/30 rounded-r-lg">
+            <p class="text-gray-200 italic sm:text-md md:text-lg">
+              "Jeśli takie są "Wizje" przyszłości polskiego rocka, to jest dobrze, naprawdę dobrze!" 
+              <span class="text-accent-silver font-semibold block mt-2">- EskaROCK</span>
+            </p>
+            <p class="text-gray-200 italic sm:text-md md:text-lg mt-4">
+              "Velow bywają i czadowi (przewrotna Smutna Piosenka), i refleksyjni (Mimo Strat, Miasto pełne krzyku). I w każdym wcieleniu im do twarzy" 
+              <span class="text-accent-silver font-semibold block mt-2">- TerazROCK</span>
+            </p>
+          </blockquote>
           
           <div class="mt-8 flex justify-center w-full">
             <a href="#music" class="btn hover:text-black">

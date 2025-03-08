@@ -30,9 +30,9 @@
             <span class="font-semibold text-white">surową energię</span> 
             z <span class="font-semibold text-white">melodyjnymi kompozycjami</span>
           </p>
-          <button class="px-8 py-3 bg-black text-xl 2xl:text-4xl text-white border border-white/40 rounded-md  transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+          <!-- <button class="px-8 py-3 bg-black text-xl 2xl:text-4xl text-white border border-white/40 rounded-md  transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
             <h1>Posłuchaj</h1>
-        </button>
+        </button> -->
         </div>
       </div>
     </div>

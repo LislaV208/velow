@@ -15,8 +15,8 @@
   <Header />
   <HomeSection />
   <AboutSection />
-  <!-- <MusicSection />
-  <ShowsSection />
+  <MusicSection />
+  <!-- <ShowsSection />
   <MediaSection />
   <MerchSection />
   <SocialSection />
