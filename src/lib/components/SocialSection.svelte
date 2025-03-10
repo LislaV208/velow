@@ -96,7 +96,7 @@
       </div>
       
       <div class="mt-16">
-        <p class="text-gray-300 mb-6">Dołącz do naszej społeczności i bądź pierwszym, który usłyszy o nowych wydawnictwach i koncertach!</p>
+        <p class="text-gray-300 mb-6">Dołącz do naszej społeczności i bądź pierwszym, który usłyszy o nowych utworach i koncertach!</p>
         <div class="relative inline-block group">
           <a href="#contact" class="btn border-accent-silver text-accent-silver hover:text-black">Zapisz się na newsletter</a>
           <div class="absolute -inset-0.5 bg-accent-steel opacity-0 group-hover:opacity-30 blur transition duration-500 rounded-sm"></div>

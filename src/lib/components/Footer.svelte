@@ -13,6 +13,7 @@
           <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-accent-silver"></span>
         </h2>
         <p class="text-gray-400 mt-2">© {currentYear} Wszelkie prawa zastrzeżone</p>
+        <p class="text-gray-400 mt-1 text-sm">Wykonanie: <a class="text-white" href="mailto:lislav.hms@gmail.com">Sebastian Lisiecki</a></p>
       </div>
       
       <div class="flex space-x-4">

@@ -16,10 +16,10 @@
   <HomeSection />
   <AboutSection />
   <MusicSection />
-  <!-- <ShowsSection />
+  <ShowsSection />
   <MediaSection />
   <MerchSection />
   <SocialSection />
   <ContactSection />
-  <Footer /> -->
+  <Footer />
 </main>

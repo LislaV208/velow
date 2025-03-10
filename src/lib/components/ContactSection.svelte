@@ -42,7 +42,7 @@
   }
 </script>
 
-<section id="contact" class="section bg-black py-20 relative">
+<section id="contact" class="section bg-black relative">
   <div class="absolute inset-0 bg-noise-pattern opacity-10"></div>
   <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent"></div>
   
@@ -50,9 +50,10 @@
     <div class={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <h2 class="section-title text-white">Kontakt</h2>
       
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <!-- <div class="grid grid-cols-1 lg:grid-cols-2 gap-12"> -->
+      <div class="max-w-2xl">
         <div>
-          <h3 class="text-3xl font-heading text-white mb-6 relative inline-block distortion-border pb-3">Napisz do nas</h3>
+          <!-- <h3 class="text-3xl font-heading text-white mb-6 relative inline-block distortion-border pb-3">Napisz do nas</h3> -->
           
           {#if submitted}
             <div class="bg-accent-red/20 border border-accent-red text-white p-4 rounded-lg mb-6 animate-fade-in">
@@ -106,10 +107,10 @@
           </form>
         </div>
         
-        <div>
+        <!-- <div>
           <h3 class="text-3xl font-heading text-white mb-6 relative inline-block distortion-border pb-3">Informacje kontaktowe</h3>
           
-          <div class="space-y-8">
+          <div class="grid sm:grid:cols-1 md:grid-cols-2  gap-4">
             <div class="bg-gray-900/30 backdrop-blur-sm p-6 rounded-lg border border-gray-800 hover:border-accent-red transition-colors duration-300">
               <h4 class="text-xl font-heading text-accent-red mb-2">Ogólny kontakt</h4>
               <p class="text-gray-300">Email: <a href="mailto:kontakt@velow.pl" class="text-white hover:text-accent-red transition-colors">kontakt@velow.pl</a></p>
@@ -154,7 +155,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

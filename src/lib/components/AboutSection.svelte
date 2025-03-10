@@ -13,10 +13,8 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           isVisible = true;
-          console.log('visible');
         } else {
           isVisible = false;
-          console.log('hidden');
         }
       });
     }, { threshold: 0.1 });

@@ -26,6 +26,8 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           isVisible = true;
+        } else {
+          isVisible = false;
         }
       });
     }, { threshold: 0.1 });
@@ -46,7 +48,7 @@
   <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/70"></div>
   
   <div class="container mx-auto px-4 relative z-10">
-    <div class={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+    <div class={`transition-all duration-800 delay-50 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <!-- <div> -->
         
       <!-- </div> -->

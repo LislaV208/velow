@@ -8,6 +8,8 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           isVisible = true;
+        } else {
+          isVisible = false;
         }
       });
     }, { threshold: 0.1 });
@@ -65,7 +67,7 @@
   <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent"></div>
   
   <div class="container mx-auto px-4 relative z-10">
-    <div class={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+    <div class={`transition-all duration-800 delay-50 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <h2 class="section-title text-white">Koncerty</h2>
       
       <div class="mb-10">
@@ -99,7 +101,7 @@
       
       <div class="mt-12 text-center">
         <div class="relative inline-block group">
-          <a href="mailto:koncerty@velow.pl" class="btn border-accent-red text-accent-red hover:text-black">Zaproś nas na koncert</a>
+          <a href="mailto:koncerty@velow.pl" class="btn border-accent-red text-accent-red hover:text-black">Zabookuj koncert</a>
           <div class="absolute -inset-0.5 bg-accent-red opacity-0 group-hover:opacity-30 blur transition duration-500 rounded-sm"></div>
         </div>
       </div>
