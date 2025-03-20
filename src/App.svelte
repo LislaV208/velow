@@ -6,7 +6,7 @@
   import ShowsSection from './lib/components/ShowsSection.svelte';
   import MediaSection from './lib/components/MediaSection.svelte';
   import MerchSection from './lib/components/MerchSection.svelte';
-  import SocialSection from './lib/components/SocialSection.svelte';
+  // import SocialSection from './lib/components/SocialSection.svelte'; // Usunięte - linki społecznościowe przeniesione do sekcji kontaktowej
   import ContactSection from './lib/components/ContactSection.svelte';
   import Footer from './lib/components/Footer.svelte';
 </script>
@@ -17,9 +17,9 @@
   <AboutSection />
   <MusicSection />
   <ShowsSection />
-  <MediaSection />
+  <!-- <MediaSection /> -->
   <MerchSection />
-  <SocialSection />
+  <!-- <SocialSection /> --> <!-- Usunięte - linki społecznościowe przeniesione do sekcji kontaktowej -->
   <ContactSection />
   <Footer />
 </main>

@@ -27,7 +27,7 @@
       date: "12.11.2025",
       venue: "Klub Stodoła",
       city: "Warszawa",
-      ticketLink: "https://example.com/tickets1"
+      ticketLink: "https://ticketmaster.pl"
     },
     // {
     //   date: "18.11.2025",
@@ -73,7 +73,7 @@
       <h2 class="text-5xl! section-title text-white">Koncerty</h2>
       
       <div class="mb-10">
-        <p class="text-gray-300 max-w-3xl text-lg">
+        <p class="text-white max-w-3xl text-lg">
           Sprawdź gdzie możesz nas zobaczyć na żywo w najbliższym czasie. Nasze koncerty to zawsze potężna dawka energii i niezapomniane wrażenia!
         </p>
       </div>

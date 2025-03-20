@@ -24,9 +24,9 @@
     <div class="container mx-auto px-4 text-center z-10">
       <div class="max-w-lg 2xl:max-w-6xl mx-auto">
         <!-- Tekst i przycisk -->
-        <div class="relative max-[1000px]:top-[12vh] max-[2000px]:top-[16vh] top-[24vh]">
+        <div class="relative max-[1000px]:top-[25vh] max-[2000px]:top-[16vh] top-[24vh]">
           <h1 class="text-6xl md:text-9xl 2xl:text-[140px] font-bold text-white mb-4">VELOW</h1>
-          <p class="text-xl 2xl:text-4xl text-gray-300 mb-10">
+          <p class="text-xl 2xl:text-2xl text-gray-300 mb-10">
             Polski zespół rockowy, który łączy 
             <span class="font-semibold text-white">surową energię</span> 
             z <span class="font-semibold text-white">melodyjnymi kompozycjami</span>
@@ -40,7 +40,7 @@
   </div>
 
   {#snippet navElem(title: string, href: string)}
-    <li><a href={href} class="nav-link sm:text-md md:text-md lg:text-xl 2xl:text-3xl text-white hover:text-accent-silver">{title}</a></li>
+    <li><a href={href} class="nav-link sm:text-md md:text-md lg:text-xl 2xl:text-2xl text-white hover:text-accent-silver">{title}</a></li>
   {/snippet}
 
   <!-- Nawigacja -->
@@ -51,7 +51,7 @@
         {@render navElem('O Nas', '#about')}
         {@render navElem('Muzyka', '#music')}
         {@render navElem('Koncerty', '#shows')}
-        {@render navElem('Media', '#media')}
+        <!-- {@render navElem('Media', '#media')} -->
         {@render navElem('Merch', '#merch')}
         {@render navElem('Kontakt', '#contact')}
       </ul>

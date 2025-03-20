@@ -35,7 +35,7 @@
         <li><a href="#about" class="nav-link text-white hover:text-accent-silver">O Nas</a></li>
         <li><a href="#music" class="nav-link text-white hover:text-accent-silver">Muzyka</a></li>
         <li><a href="#shows" class="nav-link text-white hover:text-accent-silver">Koncerty</a></li>
-        <li><a href="#media" class="nav-link text-white hover:text-accent-silver">Media</a></li>
+        <!-- <li><a href="#media" class="nav-link text-white hover:text-accent-silver">Media</a></li> -->
         <li><a href="#merch" class="nav-link text-white hover:text-accent-silver">Merch</a></li>
         <li><a href="#contact" class="nav-link text-white hover:text-accent-silver">Kontakt</a></li>
       </ul>

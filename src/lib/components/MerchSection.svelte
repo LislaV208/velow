@@ -24,39 +24,39 @@
   
   const merchItems = [
     {
-      name: "T-Shirt 'Pierwszy Krok'",
+      name: "T-Shirt 'Wizje'",
       price: "89 zł",
-      image: "/images/merch-tshirt1.jpg",
+      image: "/images/merch.jpg",
       description: "Czarny t-shirt z grafiką z okładki albumu"
     },
     {
       name: "Bluza z kapturem",
       price: "159 zł",
-      image: "/images/merch-hoodie.jpg",
+      image: "/images/merch.jpg",
       description: "Czarna bluza z logo zespołu na plecach"
     },
     {
-      name: "Album CD 'Pierwszy Krok'",
+      name: "Album CD 'Wizje'",
       price: "49 zł",
-      image: "/images/merch-cd.jpg",
+      image: "/images/merch.jpg",
       description: "Debiutancki album w digipacku z książeczką"
     },
     {
-      name: "Winyl 'Pierwszy Krok'",
+      name: "Winyl 'Wizje'",
       price: "119 zł",
-      image: "/images/merch-vinyl.jpg",
+      image: "/images/merch.jpg",
       description: "Limitowana edycja na czarnym winylu"
     },
     {
       name: "T-Shirt 'Logo'",
       price: "79 zł",
-      image: "/images/merch-tshirt2.jpg",
+      image: "/images/merch.jpg",
       description: "Szary t-shirt z minimalistycznym logo zespołu"
     },
     {
       name: "Torba płócienna",
       price: "49 zł",
-      image: "/images/merch-bag.jpg",
+      image: "/images/merch.jpg",
       description: "Czarna torba z nadrukiem logo zespołu"
     }
   ];
@@ -76,15 +76,15 @@
         </p>
       </div>
       
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
         {#each merchItems as item, i}
           <div 
-            class="card rounded-lg overflow-hidden bg-black/50 backdrop-blur-sm border border-gray-800 group hover:border-accent-red"
+            class=" card rounded-lg overflow-hidden bg-black/50 backdrop-blur-sm border border-gray-800 group hover:border-accent-red"
             style="transition-delay: {i * 100}ms"
           >
-            <div class="aspect-square overflow-hidden relative">
+            <div class="h-70  overflow-hidden relative cursor-pointer flex items-center justify-center">
               <img src={item.image} alt={item.name} class="w-full h-full object-cover transform hover:scale-105 transition-all duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <!-- <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div> -->
             </div>
             <div class="p-5 relative">
               <div class="flex justify-between items-start mb-2">
@@ -92,7 +92,7 @@
                 <span class="bg-gray-800 px-3 py-1 rounded text-white font-medium group-hover:bg-accent-red/20 transition-colors">{item.price}</span>
               </div>
               <p class="text-gray-400 text-sm mb-4">{item.description}</p>
-              <a href="#" class="btn w-full text-center border-accent-red text-accent-red hover:text-black">Kup teraz</a>
+              <a href="/" class="btn w-full text-center border-accent-red text-accent-red hover:text-black">Kup teraz</a>
             </div>
           </div>
         {/each}
@@ -101,7 +101,7 @@
       <div class="mt-12 text-center">
         <p class="text-gray-300 mb-6">Masz pytania dotyczące zamówień lub dostępności produktów?</p>
         <div class="relative inline-block group">
-          <a href="mailto:merch@velow.pl" class="btn border-accent-red text-accent-red hover:text-black">Kontakt - Merch</a>
+          <a href="#contact" class="btn border-accent-red text-accent-red hover:text-black">Kontakt</a>
           <div class="absolute -inset-0.5 bg-accent-red opacity-0 group-hover:opacity-30 blur transition duration-500 rounded-sm"></div>
         </div>
       </div>
