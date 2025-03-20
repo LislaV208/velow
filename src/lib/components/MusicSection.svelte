@@ -15,11 +15,8 @@
   ];
   
   let isVisible = $state(false);
-  let activeTrack: number | null = $state(null);
   
-  function setActiveTrack(index: number) {
-    activeTrack = index;
-  }
+  
   
   onMount(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -75,9 +72,9 @@
           >
             <div class="relative overflow-hidden rounded-lg">
               <img src="/images/okladka.png" alt="Velow - Wizje" class="w-full h-auto object-contain max-h-[400px] transition-transform duration-500 group-hover:scale-[1.03]">
-              <div class="bg-black/60 absolute bottom-0 left-0 right-0 w-full py-2 text-center transition-all duration-300 opacity-0 group-hover:opacity-100">
+              <!-- <div class="bg-black/60 absolute bottom-0 left-0 right-0 w-full py-2 text-center transition-all duration-300 opacity-0 group-hover:opacity-100">
                 <span class="text-white font-md">O albumie...</span>
-              </div>
+              </div> -->
               <!-- <div class="absolute bottom-0 left-0 right-0 bg-black/70 backdrop-blur-sm p-3">
                 <h3 class="text-accent-silver font-heading text-xl group-hover:text-white transition-colors duration-300 text-center">Wizje (2023)</h3>
               </div> -->
@@ -96,15 +93,13 @@
           <div class="space-y-3">
             {#each albumTracks as track, i}
               <div 
-                class={`px-4 py-3 rounded-lg transition-all cursor-pointer duration-300 ${i === activeTrack ? 'bg-gray-900 border-l-4 border-accent-silver' : 'bg-gray-900/50 hover:bg-gray-800/80'}`}
-                onclick={() => setActiveTrack(i)}
-                onkeydown={(e) => e.key === 'Enter' && setActiveTrack(i)}
+                class="px-4 py-3 rounded-lg transition-all cursor-pointer duration-300 bg-gray-900/50 hover:bg-gray-800/80"
                 tabindex="0"
                 role="button"
               >
                 <div class="flex justify-between items-center">
                   <div class="flex items-center">
-                    <span class={`text-2xl mr-4 font-heading ${i === activeTrack ? 'text-accent-silver' : 'text-gray-500'}`}>{i + 1}</span>
+                    <span class="text-2xl mr-4 font-heading text-gray-500">{i + 1}</span>
                     <div>
                       <h4 class="text-lg! text-white">{track.title}</h4>
                       <!-- {#if track.isHighlighted}

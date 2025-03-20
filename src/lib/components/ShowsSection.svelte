@@ -24,10 +24,39 @@
   
   const upcomingShows = [
     {
-      date: "12.11.2025",
-      venue: "Klub Stodoła",
+      date: "11-12.04.2025",
+      venue: "Rampa - Kultura i Twierdza Design",
+      city: "Goleniów",
+      ticketLink: "https://www.facebook.com/events/3607994556164757",
+      ticketText: "Wstęp free",
+    },
+    {
+      date: "30.05.2025",
+      venue: "Krzywy Gryf",
+      city: "Szczecin",
+      ticketLink: "https://www.facebook.com/events/3607994556164757",
+      ticketText: "TBA",
+    },
+    {
+      date: "14.06.2025",
+      venue: "Pan Gar",
+      city: "Poznań",
+      ticketLink: "https://www.facebook.com/events/3607994556164757",
+      ticketText: "TBA",
+    },
+    {
+      date: "TBA",
+      venue: "Klub Mechanik",
       city: "Warszawa",
-      ticketLink: "https://ticketmaster.pl"
+      ticketLink: "https://www.facebook.com/events/3607994556164757",
+      ticketText: "TBA",
+    },
+    {
+      date: "TBA",
+      venue: "Green Club",
+      city: "Gdańsk",
+      ticketLink: "https://www.facebook.com/events/3607994556164757",
+      ticketText: "TBA",
     },
     // {
     //   date: "18.11.2025",
@@ -94,8 +123,8 @@
               </div>
             </div>
             <div class="mt-auto pt-4 flex justify-between items-center">
-              <span class="text-gray-400 text-sm">20:00</span>
-              <a href={show.ticketLink} target="_blank" rel="noopener noreferrer" class="btn text-sm py-2 px-4 border-accent-red text-accent-red hover:text-black">Bilety</a>
+              <span class="text-gray-400 text-sm"></span>
+              <a href={show.ticketLink} target="_blank" rel="noopener noreferrer" class="btn text-sm py-2 px-4 border-accent-red text-accent-red hover:text-black">{show.ticketText}</a>
             </div>
           </div>
         {/each}

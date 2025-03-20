@@ -78,8 +78,8 @@
             </svg>` 
     },
     { 
-      name: "Bandcamp", 
-      url: "https://bandcamp.com", 
+      name: "TikTok", 
+      url: "https://tiktok.com", 
       icon: `<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z"/>
             </svg>` 

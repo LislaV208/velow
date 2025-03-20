@@ -25,12 +25,15 @@
       <div class="max-w-lg 2xl:max-w-6xl mx-auto">
         <!-- Tekst i przycisk -->
         <div class="relative max-[1000px]:top-[25vh] max-[2000px]:top-[16vh] top-[24vh]">
-          <h1 class="text-6xl md:text-9xl 2xl:text-[140px] font-bold text-white mb-4">VELOW</h1>
-          <p class="text-xl 2xl:text-2xl text-gray-300 mb-10">
+          <h1 class="text-6xl md:text-9xl 2xl:text-[160px] font-bold text-white mb-4" style="font-family: 'BluPurpl', sans-serif !important; text-transform: none;">veLOw</h1>
+          <p class="text-xl 2xl:text-3xl text-gray-300 mb-10" style="-webkit-text-stroke: 0.2px rgba(0, 0, 0, 1.0);">
+            Twój nowy ulubiony zespół
+          </p>
+          <!-- <p class="text-xl 2xl:text-2xl text-gray-300 mb-10">
             Polski zespół rockowy, który łączy 
             <span class="font-semibold text-white">surową energię</span> 
             z <span class="font-semibold text-white">melodyjnymi kompozycjami</span>
-          </p>
+          </p> -->
           <!-- <button class="px-8 py-3 bg-black text-xl 2xl:text-4xl text-white border border-white/40 rounded-md  transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
             <h1>Posłuchaj</h1>
         </button> -->

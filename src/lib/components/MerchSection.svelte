@@ -24,39 +24,33 @@
   
   const merchItems = [
     {
-      name: "T-Shirt 'Wizje'",
-      price: "89 zł",
-      image: "/images/merch.jpg",
-      description: "Czarny t-shirt z grafiką z okładki albumu"
+      name: "T-Shirt Tarot",
+      price: "70 zł",
+      image: "/images/merch/image2115.jpeg",
+      description: "Czarny t-shirt z grafiką"
     },
     {
       name: "Bluza z kapturem",
-      price: "159 zł",
-      image: "/images/merch.jpg",
+      price: "120 zł",
+      image: "/images/merch/image00007.jpeg",
       description: "Czarna bluza z logo zespołu na plecach"
     },
     {
       name: "Album CD 'Wizje'",
-      price: "49 zł",
-      image: "/images/merch.jpg",
+      price: "40 zł",
+      image: "/images/okladka.png",
       description: "Debiutancki album w digipacku z książeczką"
     },
     {
-      name: "Winyl 'Wizje'",
-      price: "119 zł",
-      image: "/images/merch.jpg",
-      description: "Limitowana edycja na czarnym winylu"
-    },
-    {
       name: "T-Shirt 'Logo'",
-      price: "79 zł",
-      image: "/images/merch.jpg",
-      description: "Szary t-shirt z minimalistycznym logo zespołu"
+      price: "70 zł",
+      image: "/images/merch/image00001.jpeg",
+      description: "Szary t-shirt z nazwą zespołu i logo na plecach"
     },
     {
       name: "Torba płócienna",
-      price: "49 zł",
-      image: "/images/merch.jpg",
+      price: "30 zł",
+      image: "/images/merch/image00005.jpeg",
       description: "Czarna torba z nadrukiem logo zespołu"
     }
   ];
@@ -92,19 +86,19 @@
                 <span class="bg-gray-800 px-3 py-1 rounded text-white font-medium group-hover:bg-accent-red/20 transition-colors">{item.price}</span>
               </div>
               <p class="text-gray-400 text-sm mb-4">{item.description}</p>
-              <a href="/" class="btn w-full text-center border-accent-red text-accent-red hover:text-black">Kup teraz</a>
+              <a href="/" class="btn w-full text-center border-accent-red text-accent-red hover:text-black">Kontakt</a>
             </div>
           </div>
         {/each}
       </div>
       
-      <div class="mt-12 text-center">
+      <!-- <div class="mt-12 text-center">
         <p class="text-gray-300 mb-6">Masz pytania dotyczące zamówień lub dostępności produktów?</p>
         <div class="relative inline-block group">
           <a href="#contact" class="btn border-accent-red text-accent-red hover:text-black">Kontakt</a>
           <div class="absolute -inset-0.5 bg-accent-red opacity-0 group-hover:opacity-30 blur transition duration-500 rounded-sm"></div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
   

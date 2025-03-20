@@ -38,7 +38,7 @@
       name: "Tomek",
       role: "Gitara",
       image: "/images/tomek.jpg",
-      bio: "Koleś git(arzysta), zespołowy ogarniacz i polski Mr. Beast"
+      bio: "Koleś git(arzysta), zespołowy ogarniacz. Tomek wie kto pytał"
     },
     {
       name: "Lisu",
