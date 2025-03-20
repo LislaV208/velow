@@ -29,46 +29,48 @@
       city: "Warszawa",
       ticketLink: "https://example.com/tickets1"
     },
-    {
-      date: "18.11.2025",
-      venue: "Klub Kwadrat",
-      city: "Kraków",
-      ticketLink: "https://example.com/tickets2"
-    },
-    {
-      date: "25.11.2025",
-      venue: "Klub B17",
-      city: "Poznań",
-      ticketLink: "https://example.com/tickets3"
-    },
-    {
-      date: "02.12.2025",
-      venue: "Klub Wytwórnia",
-      city: "Łódź",
-      ticketLink: "https://example.com/tickets4"
-    },
-    {
-      date: "09.12.2025",
-      venue: "Klub Parlament",
-      city: "Gdańsk",
-      ticketLink: "https://example.com/tickets5"
-    },
-    {
-      date: "16.12.2025",
-      venue: "Klub Rudy Kot",
-      city: "Wrocław",
-      ticketLink: "https://example.com/tickets6"
-    }
+    // {
+    //   date: "18.11.2025",
+    //   venue: "Klub Kwadrat",
+    //   city: "Kraków",
+    //   ticketLink: "https://example.com/tickets2"
+    // },
+    // {
+    //   date: "25.11.2025",
+    //   venue: "Klub B17",
+    //   city: "Poznań",
+    //   ticketLink: "https://example.com/tickets3"
+    // },
+    // {
+    //   date: "02.12.2025",
+    //   venue: "Klub Wytwórnia",
+    //   city: "Łódź",
+    //   ticketLink: "https://example.com/tickets4"
+    // },
+    // {
+    //   date: "09.12.2025",
+    //   venue: "Klub Parlament",
+    //   city: "Gdańsk",
+    //   ticketLink: "https://example.com/tickets5"
+    // },
+    // {
+    //   date: "16.12.2025",
+    //   venue: "Klub Rudy Kot",
+    //   city: "Wrocław",
+    //   ticketLink: "https://example.com/tickets6"
+    // }
   ];
 </script>
 
-<section id="shows" class="section bg-gradient-to-b from-black via-gray-900 to-black py-20 relative">
-  <div class="absolute inset-0 bg-noise-pattern opacity-10"></div>
-  <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent"></div>
+<!-- <section id="shows" class="section bg-gradient-to-b from-black via-gray-900 to-black py-20 relative"> -->
+<section id="shows" class="section py-20 relative">
+  <!-- <div class="absolute inset-0 bg-cover bg-center opacity-50 grayscale" style="background-image: url('/images/live.jpg')"></div> -->
+  <div class="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-0 sm:opacity-50 grayscale" style="background-image: url('/images/live.jpg')"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
   
   <div class="container mx-auto px-4 relative z-10">
     <div class={`transition-all duration-800 delay-50 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-      <h2 class="section-title text-white">Koncerty</h2>
+      <h2 class="text-5xl! section-title text-white">Koncerty</h2>
       
       <div class="mb-10">
         <p class="text-gray-300 max-w-3xl text-lg">

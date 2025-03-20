@@ -67,6 +67,7 @@
   
   <div class="container mx-auto px-4 relative z-10">
     <div class={`transition-all duration-800 delay-50 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <!-- <h2 class="text-5xl! sm:text-xl! section-title text-white">O Nas</h2> -->
       <h2 class="text-5xl! section-title text-white">O Nas</h2>
       
       <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16"> -->
