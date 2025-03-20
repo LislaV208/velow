@@ -103,7 +103,7 @@
       
       <div class="mt-12 text-center">
         <div class="relative inline-block group">
-          <a href="mailto:koncerty@velow.pl" class="btn border-accent-red text-accent-red hover:text-black">Zabookuj koncert</a>
+          <a href="#contact" class="btn border-accent-red text-accent-red hover:text-black">Zabookuj koncert</a>
           <div class="absolute -inset-0.5 bg-accent-red opacity-0 group-hover:opacity-30 blur transition duration-500 rounded-sm"></div>
         </div>
       </div>
