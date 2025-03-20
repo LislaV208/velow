@@ -8,7 +8,7 @@
   <!-- Tło -->
   <div class="absolute inset-0">
     <!-- <div class="absolute inset-0 bg-cover 2xl:bg-[auto_100%] bg-no-repeat bg-[center_100%] opacity-50" style="background-image: url('/images/home.jpg')"></div> -->
-    <div class="absolute inset-0 bg-cover opacity-50 transition-all duration-500 bg-[position:center_100%] lg:bg-[position:center_45%] xl:bg-[position:center_80%] 2xl:bg-[position:center_75%]" 
+    <div class="absolute inset-0 bg-cover opacity-50 transition-all duration-500 bg-[position:center_80%]" 
          style="background-image: url('/images/home.jpg');"></div>
     <!-- <div class="absolute inset-0 bg-cover 2xl:bg-[auto_100%] bg-no-repeat bg-center opacity-50" style="background-image: url('/images/home.jpg')"></div> -->
     <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/70"></div>
@@ -25,7 +25,7 @@
       <div class="max-w-lg 2xl:max-w-6xl mx-auto">
         <!-- Tekst i przycisk -->
         <div class="relative max-[1000px]:top-[12vh] max-[2000px]:top-[16vh] top-[24vh]">
-          <h1 class="text-6xl md:text-9xl 2xl:text-[200px] font-bold text-white mb-4">VELOW</h1>
+          <h1 class="text-6xl md:text-9xl 2xl:text-[140px] font-bold text-white mb-4">VELOW</h1>
           <p class="text-xl 2xl:text-4xl text-gray-300 mb-10">
             Polski zespół rockowy, który łączy 
             <span class="font-semibold text-white">surową energię</span> 
