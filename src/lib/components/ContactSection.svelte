@@ -138,7 +138,7 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-white font-medium text-lg mb-1">Zamówienia merchu</h3>
+                  <h3 class="text-white font-medium text-lg mb-1">Merch</h3>
                   <a href="mailto:merch@velow.pl" class="text-gray-300 hover:text-accent-red transition-colors block">merch@velow.pl</a>
                   <p class="text-gray-400 text-sm mt-1 opacity-0">Placeholder</p>
                 </div>

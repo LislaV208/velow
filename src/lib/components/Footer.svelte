@@ -8,8 +8,8 @@
   <div class="container mx-auto px-4 relative z-10">
     <div class="flex flex-col md:flex-row justify-between items-center">
       <div class="mb-4 md:mb-0">
-        <h2 class="text-3xl font-heading font-bold text-white relative inline-block">
-          VELOW
+        <h2 class="text-3xl font-heading font-bold text-white relative inline-block" style="font-family: 'BluPurpl', sans-serif !important; text-transform: none;">
+          veLOw
           <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-accent-silver"></span>
         </h2>
         <p class="text-gray-400 mt-2">© {currentYear} Wszelkie prawa zastrzeżone</p>

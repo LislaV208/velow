@@ -119,9 +119,11 @@ h1, h2, h3, h4, h5, h6 {
 .nav-link {
   position: relative;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 500;
+  letter-spacing: 1px;
+  font-weight: 200;
   transition: all 0.3s ease;
+  font-family: 'Bebas Neue', 'Oswald', sans-serif;
+  /* font-size: 1.5rem; */
 }
 
 .nav-link::after {

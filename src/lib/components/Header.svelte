@@ -46,19 +46,19 @@
 
 <header class={`fixed top-0 left-0 w-full z-50 transition-all duration-200 ${isScrolled ? 'bg-black border-2 border-black border-b-white/20 py-5' : 'bg-transparent'} ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
   <div class="container mx-auto px-4 flex justify-between items-center">
-    <a href="#home" class="text-white text-3xl font-bold relative tracking-wider overflow-hidden group">
-      <h1 class="relative z-10 inline-block transition-transform duration-300 group-hover:scale-110">VELOW</h1>
+    <a href="#home" class="text-white text-3xl font-bold relative tracking-wider overflow-visible group">
+      <h1 class="relative z-10 inline-block transition-transform duration-300 group-hover:scale-110" style="font-family: 'BluPurpl', sans-serif !important; text-transform: none;">veLOw</h1>
       <span class="absolute bottom-0 left-0 w-full h-0.5 bg-accent-silver transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
     </a>
     
     <nav class="hidden md:block">
-      <ul class="flex space-x-8">
-        <li><a href="#about" class="nav-link text-white hover:text-accent-silver">O Nas</a></li>
-        <li><a href="#music" class="nav-link text-white hover:text-accent-silver">Muzyka</a></li>
-        <li><a href="#shows" class="nav-link text-white hover:text-accent-silver">Koncerty</a></li>
+      <ul class="flex space-x-8 ">
+        <li><a href="#about" class="nav-link text-white hover:text-accent-silver text-2xl">O Nas</a></li>
+        <li><a href="#music" class="nav-link text-white hover:text-accent-silver text-2xl">Muzyka</a></li>
+        <li><a href="#shows" class="nav-link text-white hover:text-accent-silver text-2xl">Koncerty</a></li>
         <!-- <li><a href="#media" class="nav-link text-white hover:text-accent-silver">Media</a></li> -->
-        <li><a href="#merch" class="nav-link text-white hover:text-accent-silver">Merch</a></li>
-        <li><a href="#contact" class="nav-link text-white hover:text-accent-silver">Kontakt</a></li>
+        <li><a href="#merch" class="nav-link text-white hover:text-accent-silver text-2xl">Merch</a></li>
+        <li><a href="#contact" class="nav-link text-white hover:text-accent-silver text-2xl">Kontakt</a></li>
       </ul>
     </nav>
     
