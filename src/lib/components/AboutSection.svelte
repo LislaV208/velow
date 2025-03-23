@@ -2,11 +2,26 @@
   import { onMount } from 'svelte';
   import emblaCarouselSvelte from 'embla-carousel-svelte'
   import Autoplay from 'embla-carousel-autoplay'
+  import { ChevronLeft, ChevronRight } from 'lucide-svelte'
+  import type { EmblaCarouselType } from 'embla-carousel'
   
   let isVisible = $state(false);
+  let emblaApi: EmblaCarouselType | undefined;
 
-  let options = {};
+  let options = { loop: true };
   let plugins = [Autoplay({stopOnInteraction:false, delay: 8000, stopOnFocusIn: true})]
+  
+  const onEmblaInit = (event: CustomEvent) => {
+    emblaApi = event.detail;
+  };
+  
+  function scrollPrev() {
+    if (emblaApi) emblaApi.scrollPrev();
+  }
+  
+  function scrollNext() {
+    if (emblaApi) emblaApi.scrollNext();
+  }
   
   onMount(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -97,7 +112,7 @@
             </a>
           </div>
         </div>
-        <div class="flex-1 embla " use:emblaCarouselSvelte="{{options, plugins}}">
+        <div class="flex-1 embla relative" use:emblaCarouselSvelte="{{options, plugins}}" onemblaInit={onEmblaInit}>
             <div class="embla__container">
               {#each bandMembers as member, i}
               <div class="{i < bandMembers.length - 1 ? 'mr-5' : 'mr-0'} embla__slide card p-5 rounded-lg bg-black/50 backdrop-blur-sm">
@@ -115,6 +130,21 @@
                 <p class="text-gray-400 text-sm">{member.bio}</p>
               </div>
             {/each}
+            </div>
+            
+            <div class="flex justify-center mt-4 space-x-4">
+              <button 
+                class="w-10 h-10 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white border border-white/20 transition-all duration-300 hover:bg-black/50 hover:border-white/40 focus:outline-none" 
+                onclick={scrollPrev}
+                aria-label="Poprzednie zdjęcie">
+                <ChevronLeft size={20} />
+              </button>
+              <button 
+                class="w-10 h-10 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white border border-white/20 transition-all duration-300 hover:bg-black/50 hover:border-white/40 focus:outline-none" 
+                onclick={scrollNext}
+                aria-label="Następne zdjęcie">
+                <ChevronRight size={20} />
+              </button>
             </div>
           <!-- </div> -->
           <!-- <div class="absolute -inset-4 bg-gradient-to-r from-accent-red to-transparent opacity-10 blur-lg"></div>
