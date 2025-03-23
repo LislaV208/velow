@@ -2,15 +2,15 @@
   import { onMount } from 'svelte';
   
   const albumTracks = [
-    { title: "Intro", duration: "3:45", isHighlighted: true },
-    { title: "Mimo Strat", duration: "4:12", isHighlighted: false },
-    { title: "Nietykalna", duration: "3:58", isHighlighted: false },
-    { title: "Miasto Pełne Krzyku", duration: "5:21", isHighlighted: false },
-    { title: "Wizje", duration: "4:05", isHighlighted: false },
-    { title: "Smutna Piosenka", duration: "3:37", isHighlighted: false },
-    { title: "Omamiony", duration: "4:42", isHighlighted: false },
-    { title: "Paranoja", duration: "3:51", isHighlighted: false },
-    { title: "Ostatni", duration: "3:51", isHighlighted: false },
+    { title: "Intro", duration: "1:05",  },
+    { title: "Mimo Strat", duration: "4:05",  },
+    { title: "Nietykalna", duration: "4:06",  },
+    { title: "Miasto Pełne Krzyku", duration: "5:44",  },
+    { title: "Wizje", duration: "3:39",  },
+    { title: "Smutna Piosenka", duration: "3:04",  },
+    { title: "Omamiony", duration: "4:00",  },
+    { title: "Paranoja", duration: "4:14",  },
+    { title: "Ostatni", duration: "4:23",  },
     
   ];
   
@@ -63,7 +63,7 @@
           
           
           <div 
-            class="mx-auto card p-4 rounded-lg bg-black/50 backdrop-blur-sm max-w-[450px] cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-accent-silver/20 group relative"
+            class="mx-auto card p-4 rounded-lg bg-black/50 backdrop-blur-sm max-w-[450px] transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-accent-silver/20 group relative"
             role="button"
             tabindex="0"
             aria-label="Otwórz album Wizje"
@@ -93,7 +93,7 @@
           <div class="space-y-3">
             {#each albumTracks as track, i}
               <div 
-                class="px-4 py-3 rounded-lg transition-all cursor-pointer duration-300 bg-gray-900/50 hover:bg-gray-800/80"
+                class="px-4 py-3 rounded-lg transition-all duration-300 bg-gray-900/50 hover:bg-gray-800/80"
                 tabindex="0"
                 role="button"
               >
@@ -141,7 +141,7 @@
         </div>
       </div>
       <div class="flex flex-wrap justify-center gap-3 mt-8">
-        <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" class="btn">
+        <a href="https://open.spotify.com/artist/350Cbr6kdjvcgWsYZMdIL1" target="_blank" rel="noopener noreferrer" class="btn">
           <span class="flex items-center justify-center text-sm w-[150px]">
             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
@@ -149,7 +149,7 @@
             Spotify
           </span>
         </a>
-        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn">
+        <a href="https://www.youtube.com/playlist?list=PLWAqjoney6vN6Ts7zi1UBqwud6UbokzZY" target="_blank" rel="noopener noreferrer" class="btn">
           <span class="flex items-center justify-center text-sm w-[150px]">
             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
               <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
@@ -157,12 +157,20 @@
             YouTube
           </span>
         </a>
-        <a href="https://music.apple.com" target="_blank" rel="noopener noreferrer" class="btn">
+        <a href="https://music.apple.com/pl/album/wizje/1681105188" target="_blank" rel="noopener noreferrer" class="btn">
           <span class="flex items-center justify-center text-sm w-[150px]">
             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M23.997 6.124c0-.738-.065-1.47-.24-2.19-.317-1.31-1.062-2.31-2.18-3.043C21.003.517 20.373.285 19.7.164c-.517-.093-1.038-.135-1.564-.15-.04-.003-.083-.01-.124-.013H5.988c-.152.01-.303.017-.455.026C4.786.07 4.043.15 3.34.428 2.004.958 1.04 1.88.448 3.208c-.207.51-.332 1.04-.39 1.58C.017 5.03 0 5.27 0 5.51v12.98c0 .23.016.46.05.69.06.55.182 1.07.4 1.58.61 1.35 1.6 2.27 2.95 2.79.65.25 1.34.32 2.03.36.35.02.7.03 1.06.03h12.9c.386 0 .77-.01 1.15-.04.673-.05 1.34-.14 1.985-.38 1.36-.52 2.33-1.45 2.93-2.8.16-.33.28-.67.36-1.02.05-.2.08-.41.08-.63v-13.2c-.003-.295-.04-.59-.093-.87zm-12.583 12.12c-.137.141-.31.21-.49.21-.368-.004-.66-.31-.658-.67.002-.36.296-.65.655-.65.363.004.65.302.65.666-.003.192-.07.36-.19.495l.032-.05zm8.944-3.935c-.037.2-.07.4-.104.602-.07.428-.198.833-.395 1.2-.38.7-.936 1.136-1.673 1.22-.54.063-1.076.04-1.615.115-.468.066-.94.044-1.413.044h-5.44l.016-.776c.004-.2-.03-.4-.03-.6v-10.9c0-.11.014-.22.03-.33.01-.08.03-.15.04-.23.1-.72.62-1.38 1.33-1.55.14-.03.28-.05.42-.05l.08-.01h7.14c.1.01.21.02.31.04.5.09.99.32 1.25.8.26.47.35.99.35 1.53v4.24c0 .04-.01.07-.01.11-.04 1.43-.01 2.86-.04 4.29zm-11.98-12.99c-.03.077-.073.143-.13.2-.29.297-.72.37-1.08.18-.36-.19-.54-.58-.42-.98.12-.4.53-.65.94-.57.54.11.83.72.52 1.17h.17zm15.52 2.53c-.21.026-.43.037-.65.037L10.39 3.9l.2-.98h8.24c.97 0 1.38.41 1.44 1.38.01.17.01.34.01.51v.11c-.1.07-.01.14-.01.22l-.01.14c-.07.28-.21.52-.47.65z"/>
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
             </svg>
             Apple Music
+          </span>
+        </a>
+        <a href="https://tidal.com/browse/album/287470814" target="_blank" rel="noopener noreferrer" class="btn">
+          <span class="flex items-center justify-center text-sm w-[150px]">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12.012 3.992L8.008 7.996 4.004 3.992 0 7.996 4.004 12l4.004-4.004L12.012 12l-4.004 4.004 4.004 4.004 4.004-4.004L12.012 12l4.004-4.004-4.004-4.004zM16.042 7.996l3.979-3.979L24 7.996l-3.979 3.979z"/>
+            </svg>
+            TIDAL
           </span>
         </a>
       </div>
