@@ -14,6 +14,7 @@
   let mobileNavListRef: HTMLUListElement;
   let mobileIndicatorTop = $state(0);
   let mobileIndicatorWidth = $state(0);
+  let isScrollingDisabled = $state(false);
   
   // Referencje do linków nawigacyjnych
   let navLinks: Record<string, HTMLAnchorElement | null> = {};
@@ -39,7 +40,10 @@
       isVisible = scrollY > window.innerHeight * 0.88; 
       
       // Sprawdzanie, która sekcja jest aktualnie widoczna
-      updateCurrentSection();
+      // Pomijamy aktualizację, jeśli przewijanie jest wyłączone (np. po kliknięciu w link)
+      if (!isScrollingDisabled) {
+        updateCurrentSection();
+      }
     };
     
     // Funkcja do określania aktualnie widocznej sekcji
@@ -131,6 +135,23 @@
       mobileIndicatorWidth = linkRect.width;
     }
   }
+  
+  // Funkcja obsługująca kliknięcie w link nawigacyjny
+  function handleNavClick(section: string) {
+    // Natychmiast aktualizujemy sekcję bez czekania na przewinięcie
+    currentSection = section;
+    
+    // Natychmiast aktualizujemy wskaźnik
+    updateIndicator();
+    
+    // Wyłączamy obsługę przewijania na chwilę, aby zapobiec aktualizacji sekcji podczas przewijania
+    isScrollingDisabled = true;
+    
+    // Po 1 sekundzie włączamy ponownie obsługę przewijania
+    setTimeout(() => {
+      isScrollingDisabled = false;
+    }, 1000);
+  }
 </script>
 
 <header class={`fixed top-0 left-0 w-full z-50 transition-all duration-200 ${isScrolled ? 'bg-black border-2 border-black border-b-white/20 py-5' : 'bg-transparent'} ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
@@ -143,12 +164,12 @@
     <nav class="hidden md:block">
       <div class="nav-container relative">
         <ul class="flex space-x-8" bind:this={navListRef}>
-          <li><a href="#about" class="nav-link text-white hover:text-accent-silver text-2xl" bind:this={navLinks['about']}>O Nas</a></li>
-          <li><a href="#music" class="nav-link text-white hover:text-accent-silver text-2xl" bind:this={navLinks['music']}>Muzyka</a></li>
-          <li><a href="#shows" class="nav-link text-white hover:text-accent-silver text-2xl" bind:this={navLinks['shows']}>Koncerty</a></li>
+          <li><a href="#about" class="nav-link text-white hover:text-accent-silver text-2xl" bind:this={navLinks['about']} onclick={() => handleNavClick('about')}>O Nas</a></li>
+          <li><a href="#music" class="nav-link text-white hover:text-accent-silver text-2xl" bind:this={navLinks['music']} onclick={() => handleNavClick('music')}>Muzyka</a></li>
+          <li><a href="#shows" class="nav-link text-white hover:text-accent-silver text-2xl" bind:this={navLinks['shows']} onclick={() => handleNavClick('shows')}>Koncerty</a></li>
           <!-- <li><a href="#media" class="nav-link text-white hover:text-accent-silver">Media</a></li> -->
-          <li><a href="#merch" class="nav-link text-white hover:text-accent-silver text-2xl" bind:this={navLinks['merch']}>Merch</a></li>
-          <li><a href="#contact" class="nav-link text-white hover:text-accent-silver text-2xl" bind:this={navLinks['contact']}>Kontakt</a></li>
+          <li><a href="#merch" class="nav-link text-white hover:text-accent-silver text-2xl" bind:this={navLinks['merch']} onclick={() => handleNavClick('merch')}>Merch</a></li>
+          <li><a href="#contact" class="nav-link text-white hover:text-accent-silver text-2xl" bind:this={navLinks['contact']} onclick={() => handleNavClick('contact')}>Kontakt</a></li>
         </ul>
         <span class="nav-indicator" style="left: {indicatorLeft}px; width: {indicatorWidth}px;"></span>
       </div>
@@ -178,11 +199,11 @@
   <nav class="w-full px-6 py-4">
     <div class="nav-container relative">
       <ul class="flex flex-col space-y-4 text-center" bind:this={mobileNavListRef}>
-        <li><a href="#about" class="nav-link text-white text-xl hover:text-accent-silver block py-1" bind:this={mobileNavLinks['about']} onclick={() => closeMobileMenu()}>O Nas</a></li>
-        <li><a href="#music" class="nav-link text-white text-xl hover:text-accent-silver block py-1" bind:this={mobileNavLinks['music']} onclick={() => closeMobileMenu()}>Muzyka</a></li>
-        <li><a href="#shows" class="nav-link text-white text-xl hover:text-accent-silver block py-1" bind:this={mobileNavLinks['shows']} onclick={() => closeMobileMenu()}>Koncerty</a></li>
-        <li><a href="#merch" class="nav-link text-white text-xl hover:text-accent-silver block py-1" bind:this={mobileNavLinks['merch']} onclick={() => closeMobileMenu()}>Merch</a></li>
-        <li><a href="#contact" class="nav-link text-white text-xl hover:text-accent-silver block py-1" bind:this={mobileNavLinks['contact']} onclick={() => closeMobileMenu()}>Kontakt</a></li>
+        <li><a href="#about" class="nav-link text-white text-xl hover:text-accent-silver block py-1" bind:this={mobileNavLinks['about']} onclick={() => { handleNavClick('about'); closeMobileMenu(); }}>O Nas</a></li>
+        <li><a href="#music" class="nav-link text-white text-xl hover:text-accent-silver block py-1" bind:this={mobileNavLinks['music']} onclick={() => { handleNavClick('music'); closeMobileMenu(); }}>Muzyka</a></li>
+        <li><a href="#shows" class="nav-link text-white text-xl hover:text-accent-silver block py-1" bind:this={mobileNavLinks['shows']} onclick={() => { handleNavClick('shows'); closeMobileMenu(); }}>Koncerty</a></li>
+        <li><a href="#merch" class="nav-link text-white text-xl hover:text-accent-silver block py-1" bind:this={mobileNavLinks['merch']} onclick={() => { handleNavClick('merch'); closeMobileMenu(); }}>Merch</a></li>
+        <li><a href="#contact" class="nav-link text-white text-xl hover:text-accent-silver block py-1" bind:this={mobileNavLinks['contact']} onclick={() => { handleNavClick('contact'); closeMobileMenu(); }}>Kontakt</a></li>
       </ul>
       <span class="nav-indicator-mobile" style="top: {mobileIndicatorTop}px; width: {mobileIndicatorWidth}px;"></span>
     </div>
