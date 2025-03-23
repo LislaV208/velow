@@ -47,7 +47,7 @@
       name: "Eryk",
       role: "Wokal",
       image: "/images/eryk.JPG",
-      bio: "Czasem coś murknie do mikrofonu, czasem ryknie - a czasem spawa kurczaki"
+      bio: "Czasem coś murknie do mikrofonu, czasem ryknie - a czasem zapomni tekstu"
     },
     {
       name: "Tomek",
@@ -59,19 +59,19 @@
       name: "Lisu",
       role: "Gitara",
       image: "/images/lisu.jpg",
-      bio: "Jeżeli wybierasz się na jakikolwiek koncert to masz 50% szans na to, że pojawi się na scenie"
+      bio: "Za dnia cichy introwertyk, nocą zaś sceniczna bestia"
     },
     {
       name: "Wiktor",
       role: "Bas",
       image: "/images/wiktor.jpg",
-      bio: "Fanki do niego lgną, ale koszulki niekoniecznie. Sigma Skidibi Nike Pro"
+      bio: "Fanki do niego lgną, ale koszulki niekoniecznie"
     },
     {
       name: "Krystian",
       role: "Perkusja",
       image: "/images/krystian.jpg",
-      bio: "Jego ulubiony utwór to: Metronome - 120bpm"
+      bio: "Jego ulubiony utwór: Metronom - 120bpm"
     }
   ];
 </script>
