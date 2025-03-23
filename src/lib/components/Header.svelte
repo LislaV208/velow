@@ -7,6 +7,28 @@
   let isMobileMenuOpen = $state(false);
   let menuRef: HTMLElement;
   let buttonRef: HTMLElement;
+  let currentSection = $state('home');
+  let indicatorLeft = $state(0);
+  let indicatorWidth = $state(0);
+  let navListRef: HTMLUListElement;
+  let mobileNavListRef: HTMLUListElement;
+  let mobileIndicatorTop = $state(0);
+  let mobileIndicatorWidth = $state(0);
+  
+  // Referencje do linków nawigacyjnych
+  let navLinks: Record<string, HTMLAnchorElement | null> = {};
+  let mobileNavLinks: Record<string, HTMLAnchorElement | null> = {};
+  
+  // Lista wszystkich sekcji strony
+  const sections = ['home', 'about', 'music', 'shows', 'merch', 'contact'];
+  
+  // Inicjalizacja obiektu navLinks i mobileNavLinks
+  sections.forEach(section => {
+    if (section !== 'home') {
+      navLinks[section] = null;
+      mobileNavLinks[section] = null;
+    }
+  });
   
   onMount(() => {
     const handleScroll = () => {
@@ -15,13 +37,28 @@
       // isScrolled = scrollY > 777;
       isScrolled = true;
       isVisible = scrollY > window.innerHeight * 0.88; 
+      
+      // Sprawdzanie, która sekcja jest aktualnie widoczna
+      updateCurrentSection();
     };
     
-    const handleClickOutside = (event: MouseEvent) => {
-      if (isMobileMenuOpen && menuRef && buttonRef) {
-        const target = event.target as Node;
-        if (!menuRef.contains(target) && !buttonRef.contains(target)) {
-          closeMobileMenu();
+    // Funkcja do określania aktualnie widocznej sekcji
+    const updateCurrentSection = () => {
+      // Odwracamy listę sekcji, aby sprawdzać od dołu strony (zapobiega problemom z nakładającymi się sekcjami)
+      const sectionsToCheck = [...sections].reverse();
+      
+      for (const section of sectionsToCheck) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // Jeśli górna krawędź sekcji jest w widoku lub tuż nad nim (do 100px)
+          if (rect.top <= 100 && rect.bottom > 0) {
+            if (currentSection !== section) {
+              currentSection = section;
+              updateIndicator();
+            }
+            break;
+          }
         }
       }
     };
@@ -29,11 +66,26 @@
     window.addEventListener('scroll', handleScroll);
     document.addEventListener('click', handleClickOutside);
     
+    // Wywołaj raz na początku, aby ustawić początkową sekcję
+    setTimeout(() => {
+      updateCurrentSection();
+      updateIndicator();
+    }, 100);
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClickOutside);
     };
   });
+  
+  const handleClickOutside = (event: MouseEvent) => {
+    if (isMobileMenuOpen && menuRef && buttonRef) {
+      const target = event.target as Node;
+      if (!menuRef.contains(target) && !buttonRef.contains(target)) {
+        closeMobileMenu();
+      }
+    }
+  };
   
   function toggleMobileMenu(): void {
     isMobileMenuOpen = !isMobileMenuOpen;
@@ -41,6 +93,43 @@
   
   function closeMobileMenu(): void {
     isMobileMenuOpen = false;
+  }
+  
+  // Funkcja sprawdzająca, czy dany link jest aktywny
+  function isActive(section: string): boolean {
+    return currentSection === section;
+  }
+  
+  // Funkcja aktualizująca pozycję i szerokość wskaźnika
+  function updateIndicator() {
+    if (currentSection === 'home') {
+      // Gdy jesteśmy na stronie głównej, ukrywamy wskaźnik
+      indicatorWidth = 0;
+      mobileIndicatorWidth = 0;
+      return;
+    }
+    
+    // Aktualizacja wskaźnika dla widoku desktopowego
+    const activeLink = navLinks[currentSection];
+    if (activeLink && navListRef) {
+      const linkRect = activeLink.getBoundingClientRect();
+      const navRect = navListRef.getBoundingClientRect();
+      
+      // Obliczamy pozycję względem kontenera nawigacji
+      indicatorLeft = linkRect.left - navRect.left;
+      indicatorWidth = linkRect.width;
+    }
+    
+    // Aktualizacja wskaźnika dla widoku mobilnego
+    const activeMobileLink = mobileNavLinks[currentSection];
+    if (activeMobileLink && mobileNavListRef) {
+      const linkRect = activeMobileLink.getBoundingClientRect();
+      const navRect = mobileNavListRef.getBoundingClientRect();
+      
+      // Obliczamy pozycję względem kontenera nawigacji
+      mobileIndicatorTop = linkRect.top - navRect.top + linkRect.height;
+      mobileIndicatorWidth = linkRect.width;
+    }
   }
 </script>
 
@@ -52,14 +141,17 @@
     </a>
     
     <nav class="hidden md:block">
-      <ul class="flex space-x-8 ">
-        <li><a href="#about" class="nav-link text-white hover:text-accent-silver text-2xl">O Nas</a></li>
-        <li><a href="#music" class="nav-link text-white hover:text-accent-silver text-2xl">Muzyka</a></li>
-        <li><a href="#shows" class="nav-link text-white hover:text-accent-silver text-2xl">Koncerty</a></li>
-        <!-- <li><a href="#media" class="nav-link text-white hover:text-accent-silver">Media</a></li> -->
-        <li><a href="#merch" class="nav-link text-white hover:text-accent-silver text-2xl">Merch</a></li>
-        <li><a href="#contact" class="nav-link text-white hover:text-accent-silver text-2xl">Kontakt</a></li>
-      </ul>
+      <div class="nav-container relative">
+        <ul class="flex space-x-8" bind:this={navListRef}>
+          <li><a href="#about" class="nav-link text-white hover:text-accent-silver text-2xl" bind:this={navLinks['about']}>O Nas</a></li>
+          <li><a href="#music" class="nav-link text-white hover:text-accent-silver text-2xl" bind:this={navLinks['music']}>Muzyka</a></li>
+          <li><a href="#shows" class="nav-link text-white hover:text-accent-silver text-2xl" bind:this={navLinks['shows']}>Koncerty</a></li>
+          <!-- <li><a href="#media" class="nav-link text-white hover:text-accent-silver">Media</a></li> -->
+          <li><a href="#merch" class="nav-link text-white hover:text-accent-silver text-2xl" bind:this={navLinks['merch']}>Merch</a></li>
+          <li><a href="#contact" class="nav-link text-white hover:text-accent-silver text-2xl" bind:this={navLinks['contact']}>Kontakt</a></li>
+        </ul>
+        <span class="nav-indicator" style="left: {indicatorLeft}px; width: {indicatorWidth}px;"></span>
+      </div>
     </nav>
     
     <button 
@@ -84,12 +176,15 @@
   bind:this={menuRef}
 >
   <nav class="w-full px-6 py-4">
-    <ul class="flex flex-col space-y-4 text-center">
-      <li><a href="#about" class="nav-link text-white text-xl hover:text-accent-silver block py-1" onclick={() => closeMobileMenu()}>O Nas</a></li>
-      <li><a href="#music" class="nav-link text-white text-xl hover:text-accent-silver block py-1" onclick={() => closeMobileMenu()}>Muzyka</a></li>
-      <li><a href="#shows" class="nav-link text-white text-xl hover:text-accent-silver block py-1" onclick={() => closeMobileMenu()}>Koncerty</a></li>
-      <li><a href="#merch" class="nav-link text-white text-xl hover:text-accent-silver block py-1" onclick={() => closeMobileMenu()}>Merch</a></li>
-      <li><a href="#contact" class="nav-link text-white text-xl hover:text-accent-silver block py-1" onclick={() => closeMobileMenu()}>Kontakt</a></li>
-    </ul>
+    <div class="nav-container relative">
+      <ul class="flex flex-col space-y-4 text-center" bind:this={mobileNavListRef}>
+        <li><a href="#about" class="nav-link text-white text-xl hover:text-accent-silver block py-1" bind:this={mobileNavLinks['about']} onclick={() => closeMobileMenu()}>O Nas</a></li>
+        <li><a href="#music" class="nav-link text-white text-xl hover:text-accent-silver block py-1" bind:this={mobileNavLinks['music']} onclick={() => closeMobileMenu()}>Muzyka</a></li>
+        <li><a href="#shows" class="nav-link text-white text-xl hover:text-accent-silver block py-1" bind:this={mobileNavLinks['shows']} onclick={() => closeMobileMenu()}>Koncerty</a></li>
+        <li><a href="#merch" class="nav-link text-white text-xl hover:text-accent-silver block py-1" bind:this={mobileNavLinks['merch']} onclick={() => closeMobileMenu()}>Merch</a></li>
+        <li><a href="#contact" class="nav-link text-white text-xl hover:text-accent-silver block py-1" bind:this={mobileNavLinks['contact']} onclick={() => closeMobileMenu()}>Kontakt</a></li>
+      </ul>
+      <span class="nav-indicator-mobile" style="top: {mobileIndicatorTop}px; width: {mobileIndicatorWidth}px;"></span>
+    </div>
   </nav>
 </div>

@@ -126,7 +126,8 @@ h1, h2, h3, h4, h5, h6 {
   /* font-size: 1.5rem; */
 }
 
-.nav-link::after {
+/* Usuwamy pseudo-element ::after z każdego linku */
+/* .nav-link::after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -139,6 +140,35 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+.nav-link.active::after {
+  width: 100%;
+  background-color: #C0C0C0;
+} */
+
+/* Kontener nawigacji z podkreśleniem */
+.nav-container {
+  position: relative;
+}
+
+/* Podkreślenie, które będzie się przesuwać - wersja desktopowa */
+.nav-indicator {
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  background-color: #C0C0C0;
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+/* Podkreślenie, które będzie się przesuwać - wersja mobilna */
+.nav-indicator-mobile {
+  position: absolute;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #C0C0C0;
+  transition: top 0.3s ease, width 0.3s ease;
 }
 
 .card {
