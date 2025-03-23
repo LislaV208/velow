@@ -24,7 +24,7 @@
   
   const upcomingShows = [
     {
-      date: "11-12.04.2025",
+      date: "11.04.2025\n12.04.2025",
       venue: "Rampa - Kultura i Twierdza Design",
       city: "Goleniów",
       ticketLink: "https://www.facebook.com/events/3607994556164757",
@@ -110,20 +110,19 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {#each upcomingShows as show, i}
           <div 
-            class="card p-6 rounded-lg bg-black/50 backdrop-blur-sm border border-gray-800 group hover:border-accent-red"
+            class="card p-6 rounded-lg bg-black/50 backdrop-blur-sm border border-gray-800 group hover:border-accent-red flex flex-col h-full"
             style="transition-delay: {i * 100}ms"
           >
-            <div class="flex justify-between items-start mb-4">
+            <div class="flex justify-between mb-4">
               <div>
                 <h3 class="text-2xl font-heading text-white group-hover:text-accent-red transition-colors">{show.city}</h3>
                 <p class="text-accent">{show.venue}</p>
               </div>
-              <div class="bg-gray-800 px-3 py-2 rounded relative overflow-hidden group-hover:bg-accent-red/20 transition-colors">
-                <span class="text-white font-medium relative z-10">{show.date}</span>
+              <div class="bg-gray-800 px-3 py-2 rounded relative overflow-hidden group-hover:bg-accent-red/20 transition-colors min-w-[100px] flex items-center justify-center">
+                <span class="text-white font-medium relative z-10 text-center whitespace-pre-line">{show.date}</span>
               </div>
             </div>
-            <div class="mt-auto pt-4 flex justify-between items-center">
-              <span class="text-gray-400 text-sm"></span>
+            <div class="mt-auto pt-4 flex justify-end items-center">
               <a href={show.ticketLink} target="_blank" rel="noopener noreferrer" class="btn text-sm py-2 px-4 border-accent-red text-accent-red hover:text-black">{show.ticketText}</a>
             </div>
           </div>
