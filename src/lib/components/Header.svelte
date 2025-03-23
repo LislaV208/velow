@@ -53,7 +53,6 @@
     
     <nav class="hidden md:block">
       <ul class="flex space-x-8">
-        <li><a href="#home" class="nav-link text-white hover:text-accent-silver">Start</a></li>
         <li><a href="#about" class="nav-link text-white hover:text-accent-silver">O Nas</a></li>
         <li><a href="#music" class="nav-link text-white hover:text-accent-silver">Muzyka</a></li>
         <li><a href="#shows" class="nav-link text-white hover:text-accent-silver">Koncerty</a></li>
@@ -86,7 +85,6 @@
 >
   <nav class="w-full px-6 py-4">
     <ul class="flex flex-col space-y-4 text-center">
-      <li><a href="#home" class="nav-link text-white text-xl hover:text-accent-silver block py-1" onclick={() => closeMobileMenu()}>Start</a></li>
       <li><a href="#about" class="nav-link text-white text-xl hover:text-accent-silver block py-1" onclick={() => closeMobileMenu()}>O Nas</a></li>
       <li><a href="#music" class="nav-link text-white text-xl hover:text-accent-silver block py-1" onclick={() => closeMobileMenu()}>Muzyka</a></li>
       <li><a href="#shows" class="nav-link text-white text-xl hover:text-accent-silver block py-1" onclick={() => closeMobileMenu()}>Koncerty</a></li>
