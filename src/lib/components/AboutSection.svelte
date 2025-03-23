@@ -134,13 +134,13 @@
             
             <div class="flex justify-center mt-4 space-x-4">
               <button 
-                class="w-10 h-10 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white border border-white/20 transition-all duration-300 hover:bg-black/50 hover:border-white/40 focus:outline-none" 
+                class="w-10 h-10 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white border border-white/20 transition-all duration-300 hover:bg-black/50 hover:border-white/40 focus:outline-none cursor-pointer" 
                 onclick={scrollPrev}
                 aria-label="Poprzednie zdjęcie">
                 <ChevronLeft size={20} />
               </button>
               <button 
-                class="w-10 h-10 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white border border-white/20 transition-all duration-300 hover:bg-black/50 hover:border-white/40 focus:outline-none" 
+                class="w-10 h-10 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white border border-white/20 transition-all duration-300 hover:bg-black/50 hover:border-white/40 focus:outline-none cursor-pointer" 
                 onclick={scrollNext}
                 aria-label="Następne zdjęcie">
                 <ChevronRight size={20} />
