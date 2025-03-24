@@ -46,31 +46,31 @@
     {
       name: "Eryk",
       role: "Wokal",
-      image: "/images/eryk.JPG",
+      image: "/images/eryk.webp",
       bio: "Czasem coś murknie do mikrofonu, czasem ryknie - a czasem zapomni tekstu"
     },
     {
       name: "Tomek",
       role: "Gitara",
-      image: "/images/tomek.jpg",
+      image: "/images/tomek.webp",
       bio: "Koleś git(arzysta), zespołowy ogarniacz. Tomek wie kto pytał"
     },
     {
       name: "Lisu",
       role: "Gitara",
-      image: "/images/lisu.jpg",
+      image: "/images/lisu.webp",
       bio: "Za dnia cichy introwertyk, nocą zaś sceniczna bestia"
     },
     {
       name: "Wiktor",
       role: "Bas",
-      image: "/images/wiktor.jpg",
+      image: "/images/wiktor.webp",
       bio: "Fanki do niego lgną, ale koszulki niekoniecznie"
     },
     {
       name: "Krystian",
       role: "Perkusja",
-      image: "/images/krystian.jpg",
+      image: "/images/krystian.webp",
       bio: "Jego ulubiony utwór: Metronom - 120bpm"
     }
   ];
@@ -115,7 +115,7 @@
         <div class="flex-1 embla relative" use:emblaCarouselSvelte="{{options, plugins}}" onemblaInit={onEmblaInit}>
             <div class="embla__container">
               {#each bandMembers as member, i}
-              <div class="{i < bandMembers.length - 1 ? 'mr-5' : 'mr-0'} embla__slide card p-5 rounded-lg bg-black/50 backdrop-blur-sm">
+              <div class="{i < bandMembers.length - 1 ? 'mr-5' : 'mr-0'} embla__slide card p-5 rounded-lg bg-black/50 ">
                 <div class="relative mb-4 overflow-hidden rounded-lg aspect-square">
                   <!-- <img src={member.image} alt={member.name} class="w-full h-full object-cover grayscale"> -->
                   <img src={member.image} alt={member.name} class="w-full h-full object-cover grayscale"
@@ -148,7 +148,7 @@
             </div>
           <!-- </div> -->
           <!-- <div class="absolute -inset-4 bg-gradient-to-r from-accent-red to-transparent opacity-10 blur-lg"></div>
-          <img src="/images/band-about.jpg" alt="Zespół Velow" class="w-full h-auto rounded-lg shadow-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-700">
+          <img src="/images/band-about.webp" alt="Zespół Velow" class="w-full h-auto rounded-lg shadow-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-700">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div> -->
           <!-- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {#each bandMembers as member, i}

@@ -33,7 +33,7 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'noise-pattern': "url('/images/noise-texture.png')",
+        'noise-pattern': "url('/images/noise-texture.webp')",
       },
       textShadow: {
         'default': '2px 2px 4px rgba(0, 0, 0, 0.5)',

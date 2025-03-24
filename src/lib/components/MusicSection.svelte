@@ -40,7 +40,7 @@
 
 <section id="music" class="section bg-black relative">
   <!-- <div class="absolute inset-0 bg-noise-pattern opacity-10"></div> -->
-  <div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('/images/wizje_tlo.png')"></div>
+  <div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('/images/wizje_tlo.webp')"></div>
   <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent"></div>
   <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/70"></div>
   
@@ -55,7 +55,7 @@
           <h2 class="text-5xl! section-title text-white">Muzyka</h2>
         <!-- <div class="relative mb-8 group">
             <div class="absolute -inset-4 bg-gradient-to-r from-accent-silver to-transparent opacity-0 group-hover:opacity-20 blur-lg transition-opacity duration-700"></div>
-            <img src="/images/album-cover.jpg" alt="Album Pierwszy Krok" class="w-full h-auto rounded-lg shadow-2xl relative z-10">
+            <img src="/images/album-cover.webp" alt="Album Pierwszy Krok" class="w-full h-auto rounded-lg shadow-2xl relative z-10">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent/30 rounded-lg"></div>
             
           </div> -->
@@ -71,7 +71,7 @@
             onclick={() => console.log('Album clicked')}
           >
             <div class="relative overflow-hidden rounded-lg">
-              <img src="/images/okladka.png" alt="Velow - Wizje" class="w-full h-auto object-contain max-h-[400px] transition-transform duration-500 group-hover:scale-[1.03]">
+              <img src="/images/okladka.webp" alt="Velow - Wizje" class="w-full h-auto object-contain max-h-[400px] transition-transform duration-500 group-hover:scale-[1.03]">
               <!-- <div class="bg-black/60 absolute bottom-0 left-0 right-0 w-full py-2 text-center transition-all duration-300 opacity-0 group-hover:opacity-100">
                 <span class="text-white font-md">O albumie...</span>
               </div> -->

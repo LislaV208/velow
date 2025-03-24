@@ -2,29 +2,29 @@
   import { onMount } from 'svelte';
   
   const photos = [
-    { src: "/images/gallery1.jpg", alt: "Koncert w Warszawie" },
-    { src: "/images/gallery2.jpg", alt: "Backstage" },
-    { src: "/images/gallery3.jpg", alt: "Sesja zdjęciowa" },
-    { src: "/images/gallery4.jpg", alt: "Festiwal rockowy" },
-    { src: "/images/gallery5.jpg", alt: "W studiu" },
-    { src: "/images/gallery6.jpg", alt: "Próba zespołu" }
+    { src: "/images/gallery1.webp", alt: "Koncert w Warszawie" },
+    { src: "/images/gallery2.webp", alt: "Backstage" },
+    { src: "/images/gallery3.webp", alt: "Sesja zdjęciowa" },
+    { src: "/images/gallery4.webp", alt: "Festiwal rockowy" },
+    { src: "/images/gallery5.webp", alt: "W studiu" },
+    { src: "/images/gallery6.webp", alt: "Próba zespołu" }
   ];
   
   const videos = [
     { 
       title: "Pierwszy Krok - Official Video",
       embedUrl: "https://www.youtube.com/embed/placeholder1",
-      thumbnail: "/images/video-thumb1.jpg"
+      thumbnail: "/images/video-thumb1.webp"
     },
     { 
       title: "Ciemna Strona - Live",
       embedUrl: "https://www.youtube.com/embed/placeholder2",
-      thumbnail: "/images/video-thumb2.jpg"
+      thumbnail: "/images/video-thumb2.webp"
     },
     { 
       title: "Wywiad z zespołem",
       embedUrl: "https://www.youtube.com/embed/placeholder3",
-      thumbnail: "/images/video-thumb3.jpg"
+      thumbnail: "/images/video-thumb3.webp"
     }
   ];
   

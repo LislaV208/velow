@@ -26,31 +26,31 @@
     {
       name: "T-Shirt Tarot",
       price: "70 zł",
-      image: "/images/merch/image2115.jpeg",
+      image: "/images/merch/image2115.webp",
       description: "Czarny t-shirt z grafiką"
     },
     {
       name: "Bluza z kapturem",
       price: "120 zł",
-      image: "/images/merch/image00007.jpeg",
+      image: "/images/merch/image00007.webp",
       description: "Czarna bluza z logo zespołu na plecach"
     },
     {
       name: "Album CD 'Wizje'",
       price: "40 zł",
-      image: "/images/okladka.png",
+      image: "/images/okladka.webp",
       description: "Debiutancki album w digipacku z książeczką"
     },
     {
       name: "T-Shirt 'Logo'",
       price: "70 zł",
-      image: "/images/merch/image00001.jpeg",
+      image: "/images/merch/image00001.webp",
       description: "Szary t-shirt z nazwą zespołu i logo na plecach"
     },
     {
       name: "Torba płócienna",
       price: "30 zł",
-      image: "/images/merch/image00005.jpeg",
+      image: "/images/merch/image00005.webp",
       description: "Czarna torba z nadrukiem logo zespołu"
     }
   ];

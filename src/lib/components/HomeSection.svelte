@@ -7,10 +7,10 @@
 <section id="home" class="relative min-h-screen flex flex-col">
   <!-- Tło -->
   <div class="absolute inset-0">
-    <!-- <div class="absolute inset-0 bg-cover 2xl:bg-[auto_100%] bg-no-repeat bg-[center_100%] opacity-50" style="background-image: url('/images/home.jpg')"></div> -->
+    <!-- <div class="absolute inset-0 bg-cover 2xl:bg-[auto_100%] bg-no-repeat bg-[center_100%] opacity-50" style="background-image: url('/images/home.webp')"></div> -->
     <div class="absolute inset-0 bg-cover opacity-50 transition-all duration-500 bg-[position:center_80%]" 
-         style="background-image: url('/images/home.jpg');"></div>
-    <!-- <div class="absolute inset-0 bg-cover 2xl:bg-[auto_100%] bg-no-repeat bg-center opacity-50" style="background-image: url('/images/home.jpg')"></div> -->
+         style="background-image: url('/images/home.webp');"></div>
+    <!-- <div class="absolute inset-0 bg-cover 2xl:bg-[auto_100%] bg-no-repeat bg-center opacity-50" style="background-image: url('/images/home.webp')"></div> -->
     <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/70"></div>
     <!-- <div class="absolute inset-0 max-[2048px]:hidden min-[2048px]:w-[2048px] left-1/2 -translate-x-1/2">
       <div class="absolute inset-0 min-[2048px]:bg-gradient-to-l from-transparent from-70% to-black to-100%"></div>

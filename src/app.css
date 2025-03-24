@@ -37,7 +37,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
-  background-image: url('/images/noise-texture.png');
+  background-image: url('/images/noise-texture.webp');
   background-repeat: repeat;
   background-size: 200px;
   background-blend-mode: overlay;

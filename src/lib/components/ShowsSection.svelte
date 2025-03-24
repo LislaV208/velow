@@ -93,8 +93,8 @@
 
 <!-- <section id="shows" class="section bg-gradient-to-b from-black via-gray-900 to-black py-20 relative"> -->
 <section id="shows" class="section py-20 relative">
-  <!-- <div class="absolute inset-0 bg-cover bg-center opacity-50 grayscale" style="background-image: url('/images/live.jpg')"></div> -->
-  <div class="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-0 sm:opacity-60 grayscale" style="background-image: url('/images/live.jpg')"></div>
+  <!-- <div class="absolute inset-0 bg-cover bg-center opacity-50 grayscale" style="background-image: url('/images/live.webp')"></div> -->
+  <div class="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-0 sm:opacity-60 grayscale" style="background-image: url('/images/live.webp')"></div>
   <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
   
   <div class="container mx-auto px-4 relative z-10">
