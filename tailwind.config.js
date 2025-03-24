@@ -31,10 +31,6 @@ export default {
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'noise-pattern': "url('/images/noise-texture.webp')",
-      },
       textShadow: {
         'default': '2px 2px 4px rgba(0, 0, 0, 0.5)',
         'glow': '0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3)',
