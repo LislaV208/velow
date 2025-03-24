@@ -112,14 +112,16 @@
             </a>
           </div>
         </div>
+        <!-- Usuwam ziarno z obrazu poprzez dodanie filtrów CSS -->
+<!-- <img src="/images/eryk.JPG" alt="Eryk" class="w-100 h-100 object-cover filter blur-[0.6px]"> -->
+
         <div class="flex-1 embla relative" use:emblaCarouselSvelte="{{options, plugins}}" onemblaInit={onEmblaInit}>
             <div class="embla__container">
               {#each bandMembers as member, i}
               <div class="{i < bandMembers.length - 1 ? 'mr-5' : 'mr-0'} embla__slide card p-5 rounded-lg bg-black/50 ">
                 <div class="relative mb-4 overflow-hidden rounded-lg aspect-square">
-                  <!-- <img src={member.image} alt={member.name} class="w-full h-full object-cover grayscale"> -->
                   <img src={member.image} alt={member.name} class="w-full h-full object-cover grayscale"
-                  style="object-position: center {member.name === 'Eryk' ? '70%' : member.name === 'Lisu' ? '0%': member.name === 'Wiktor' ? '30%' : member.name === 'Krystian' ? '30%' : '50%'}"
+                  style="object-position: center {member.name === 'Eryk' ? '70%' : member.name === 'Lisu' ? '0%': member.name === 'Wiktor' ? '30%' : member.name === 'Krystian' ? '30%' : '50%'} "
                   >
                   <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                   <div class="absolute bottom-0 left-0 w-full p-3">
