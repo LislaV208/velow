@@ -86,7 +86,7 @@
                 <span class="bg-gray-800 px-3 py-1 rounded text-white font-medium group-hover:bg-accent-red/20 transition-colors">{item.price}</span>
               </div>
               <p class="text-gray-400 text-sm mb-4">{item.description}</p>
-              <a href="/" class="btn w-full text-center border-accent-red text-accent-red hover:text-black">Kontakt</a>
+              <a href="#contact" class="btn w-full text-center border-accent-red text-accent-red hover:text-black">Kontakt</a>
             </div>
           </div>
         {/each}
