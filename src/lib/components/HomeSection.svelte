@@ -1,6 +1,22 @@
 <script lang="ts">
   import { ArrowDown } from 'lucide-svelte'
+  import { onMount } from 'svelte';
   
+  let backgroundLoaded = $state(false);
+  
+  onMount(() => {
+    // Ładowanie obrazu tła
+    const img = new Image();
+    img.src = '/images/home.webp';
+    img.onload = () => {
+      backgroundLoaded = true;
+    };
+    
+    // Fallback - jeśli obraz jest już w cache, może nie wywołać onload
+    if (img.complete) {
+      backgroundLoaded = true;
+    }
+  });
 </script>
 
 
@@ -8,7 +24,7 @@
   <!-- Tło -->
   <div class="absolute inset-0">
     <!-- <div class="absolute inset-0 bg-cover 2xl:bg-[auto_100%] bg-no-repeat bg-[center_100%] opacity-50" style="background-image: url('/images/home.webp')"></div> -->
-    <div class="absolute inset-0 bg-cover opacity-50 transition-all duration-500 bg-[position:center_80%]" 
+    <div class="absolute inset-0 bg-cover transition-all duration-1300 bg-[position:center_80%] {backgroundLoaded ? 'opacity-50' : 'opacity-0'}" 
          style="background-image: url('/images/home.webp');"></div>
     <!-- <div class="absolute inset-0 bg-cover 2xl:bg-[auto_100%] bg-no-repeat bg-center opacity-50" style="background-image: url('/images/home.webp')"></div> -->
     <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/70"></div>
@@ -25,8 +41,16 @@
       <div class="max-w-lg 2xl:max-w-6xl mx-auto">
         <!-- Tekst i przycisk -->
         <div class="relative max-[1000px]:top-[25vh] max-[2000px]:top-[16vh] top-[24vh]">
-          <h1 class="text-6xl md:text-9xl 2xl:text-[160px] font-bold text-white mb-4" style="font-family: 'BluPurpl', sans-serif !important; text-transform: none; text-shadow: 2px 2px 0px rgba(0,0,0,0.8), 4px 4px 0px rgba(0,0,0,0.5), 6px 6px 0px rgba(0,0,0,0.3), 8px 8px 10px rgba(0,0,0,0.2);">veLOw</h1>
-          <p class="text-xl 2xl:text-3xl text-white font-medium mb-10" style="text-shadow: 1px 1px 0px rgba(0,0,0,0.8), 2px 2px 0px rgba(0,0,0,0.5), 3px 3px 0px rgba(0,0,0,0.3), 4px 4px 5px rgba(0,0,0,0.2);">
+          <h1 
+            class="text-6xl md:text-9xl 2xl:text-[160px] font-bold text-white mb-4" 
+            style="font-family: 'BluPurpl', sans-serif !important; text-transform: none; text-shadow: 2px 2px 0px rgba(0,0,0,0.8), 4px 4px 0px rgba(0,0,0,0.5), 6px 6px 0px rgba(0,0,0,0.3), 8px 8px 10px rgba(0,0,0,0.2);"
+          >
+            veLOw
+          </h1>
+          <p 
+            class="text-xl 2xl:text-3xl text-white font-medium mb-10" 
+            style="text-shadow: 1px 1px 0px rgba(0,0,0,0.8), 2px 2px 0px rgba(0,0,0,0.5), 3px 3px 0px rgba(0,0,0,0.3), 4px 4px 5px rgba(0,0,0,0.2);"
+          >
             Twój nowy ulubiony zespół
           </p>
           <!-- <p class="text-xl 2xl:text-2xl text-gray-300 mb-10">
