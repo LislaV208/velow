@@ -87,65 +87,68 @@
 </script>
 
 <section id="contact" class="section bg-black relative">
-  <div class="absolute inset-0 bg-noise-pattern opacity-10"></div>
-  <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent"></div>
+  <!-- <div class="absolute inset-0 bg-noise-pattern opacity-10"></div>
+  <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent"></div> -->
+
+  <div class="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-0 sm:opacity-100" style="background-image: url('/images/contact.webp')"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black"></div>
   
   <div class="container mx-auto px-4 relative z-10">
     <div class={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div>
-          <h2 class="section-title text-white">Kontakt</h2>
+          <h2 class="section-title text-white mb-8">Kontakt</h2>
           
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
             <!-- Lewa kolumna -->
             <div class="space-y-8">
               <!-- Telefon -->
-              <div class="flex items-start group hover:scale-105 transition-transform duration-300 h-[85px]">
-                <div class="mr-4 text-accent-red flex-shrink-0 w-8 flex justify-center">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div class="flex items-start group hover:scale-105 transition-transform duration-300  backdrop-blur-sm bg-black/50 p-4 rounded-lg border border-white/10">
+                <div class="mr-4 text-accent-red flex-shrink-0 w-8 flex justify-center ">
+                  <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-white font-medium text-lg mb-1">Telefon</h3>
-                  <a href="tel:+48664082748" class="text-gray-300 hover:text-accent-red transition-colors block">+48 664 082 748</a>
-                  <p class="text-gray-400 text-sm mt-1">Kontakt: Tomasz Guz</p>
+                  <h3 class="text-white font-bold text-lg mb-2">Telefon</h3>
+                  <a href="tel:+48664082748" class="text-white hover:text-accent-red transition-colors block text-lg font-medium">+48 664 082 748</a>
+                  <p class="text-gray-300 text-sm mt-1">Tomasz Guz</p>
                 </div>
               </div>
               
-              <!-- Email ogólny -->
-              <div class="flex items-start group hover:scale-105 transition-transform duration-300 h-[85px]">
+              <!-- Email merch -->
+              <div class="flex items-start group hover:scale-105 transition-transform duration-300  backdrop-blur-sm bg-black/50 p-4 rounded-lg border border-white/10">
                 <div class="mr-4 text-accent-red flex-shrink-0 w-8 flex justify-center">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-white font-medium text-lg mb-1">Email ogólny</h3>
-                  <a href="mailto:kontakt@velow.pl" class="text-gray-300 hover:text-accent-red transition-colors block">kontakt@velow.pl</a>
-                  <p class="text-gray-400 text-sm mt-1 opacity-0">Placeholder</p>
+                  <h3 class="text-white font-bold text-lg mb-2">Merch</h3>
+                  <a href="mailto:merch@velow.pl" class="text-white hover:text-accent-red transition-colors block text-lg font-medium">merch@velow.pl</a>
+                  <p class="text-gray-300 text-sm mt-1 opacity-0">Zamówienia i pytania</p>
                 </div>
               </div>
             </div>
             
             <!-- Prawa kolumna -->
             <div class="space-y-8">
-              <!-- Email merch -->
-              <div class="flex items-start group hover:scale-105 transition-transform duration-300 h-[85px]">
+              <!-- Email kontaktowy -->
+              <div class="flex items-start group hover:scale-105 transition-transform duration-300  backdrop-blur-sm bg-black/50 p-4 rounded-lg border border-white/10">
                 <div class="mr-4 text-accent-red flex-shrink-0 w-8 flex justify-center">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                  <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-white font-medium text-lg mb-1">Merch</h3>
-                  <a href="mailto:merch@velow.pl" class="text-gray-300 hover:text-accent-red transition-colors block">merch@velow.pl</a>
-                  <p class="text-gray-400 text-sm mt-1 opacity-0">Placeholder</p>
+                  <h3 class="text-white font-bold text-lg mb-2">Kontakt</h3>
+                  <a href="mailto:kontakt@velow.pl" class="text-white hover:text-accent-red transition-colors block text-lg font-medium">kontakt@velow.pl</a>
+                  <p class="text-gray-300 text-sm mt-1 opacity-0">Placeholder</p>
                 </div>
               </div>
               
               <!-- Booking -->
-              <div class="flex items-start group hover:scale-105 transition-transform duration-300 h-[85px]">
+              <!-- <div class="flex items-start group hover:scale-105 transition-transform duration-300 h-[85px]">
                 <div class="mr-4 text-accent-red flex-shrink-0 w-8 flex justify-center">
                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
@@ -156,7 +159,7 @@
                   <a href="mailto:booking@velow.pl" class="text-gray-300 hover:text-accent-red transition-colors block">booking@velow.pl</a>
                   <p class="text-gray-400 text-sm mt-1 opacity-0">Placeholder</p>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
           
@@ -165,30 +168,42 @@
         
         <!-- Sekcja z linkami społecznościowymi -->
         <div>
-          <h2 class="section-title text-white">Obserwuj nas</h2>
-          <p class="text-gray-300 mb-8">
+          <h2 class="section-title text-white mb-8">Obserwuj nas</h2>
+          <p class="text-white text-lg mb-8">
             Bądź na bieżąco z naszymi nowościami, koncertami i zakulisowymi materiałami.
           </p>
           
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
             {#each socialLinks as link, i}
               <a 
                 href={link.url} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                class="flex flex-col items-center justify-center p-4 rounded-lg bg-black/50 backdrop-blur-sm border border-gray-800 hover:border-accent-silver transition-all duration-300 transform hover:-translate-y-1 group"
-                style="transition-delay: {i * 100}ms"
+                class="flex flex-col items-center justify-center p-5 rounded-lg bg-black/70 backdrop-blur-sm border border-white/10 hover:border-accent-silver hover:scale-105 transition-transform duration-300 group"
+                
               >
-                <div class="text-gray-400 group-hover:text-accent-silver transition-colors mb-2" aria-hidden="true">
+                <div class="text-white group-hover:text-accent-silver transition-colors mb-3" aria-hidden="true">
                   {@html link.icon}
                 </div>
-                <span class="text-sm text-gray-300 group-hover:text-white transition-colors">{link.name}</span>
+                <span class="text-base font-medium text-white group-hover:text-accent-silver transition-colors">{link.name}</span>
               </a>
             {/each}
           </div>
         </div>
         
         
+      </div>
+      
+      <!-- Przycisk PRESSPACK -->
+      <div class="mt-16 text-center">
+        <a 
+          href="https://drive.google.com/drive/u/4/folders/1BPVe3kfjeZoqd0Kfj2-hRGFTjYu_ihXF" 
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn border-accent-silver text-accent-silver hover:text-black inline-block px-8 py-3 text-lg font-bold uppercase tracking-wider transition-all duration-300  backdrop-blur-sm bg-black/50 border border-white/10"
+        >
+          PRESSPACK
+        </a>
       </div>
     </div>
   </div>
