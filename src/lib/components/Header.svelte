@@ -39,6 +39,11 @@
       isScrolled = true;
       isVisible = scrollY > window.innerHeight * 0.88; 
       
+      // Gdy przewiniemy do głównej sekcji lub jesteśmy na głównej sekcji, zamykamy mobilne menu
+      if ((scrollY < window.innerHeight * 0.5 || currentSection === 'home') && isMobileMenuOpen) {
+        closeMobileMenu();
+      }
+      
       // Sprawdzanie, która sekcja jest aktualnie widoczna
       // Pomijamy aktualizację, jeśli przewijanie jest wyłączone (np. po kliknięciu w link)
       if (!isScrollingDisabled) {
@@ -192,13 +197,13 @@
 
 <!-- Mobilne menu -->
 <div 
-  class="md:hidden fixed top-10 left-0 w-full bg-black border-b-2 border-white/20 z-40 transition-all duration-300 overflow-hidden"
+  class="md:hidden fixed top-[60px] left-0 w-full bg-black border-b-2 border-white/20 z-40 transition-all duration-300 overflow-hidden"
   style="max-height: {isMobileMenuOpen ? '400px' : '0'}; opacity: {isMobileMenuOpen ? '1' : '0'}; transform: translateY({isMobileMenuOpen ? '0' : '-10px'});"
   bind:this={menuRef}
 >
-  <nav class="w-full px-6 py-4">
+  <nav class="w-full px-6 py-6 pt-10">
     <div class="nav-container relative">
-      <ul class="flex flex-col space-y-4 text-center" bind:this={mobileNavListRef}>
+      <ul class="flex flex-col space-y-6 text-center" bind:this={mobileNavListRef}>
         <li><a href="#about" class="nav-link text-white text-xl hover:text-accent-silver block py-1" bind:this={mobileNavLinks['about']} onclick={() => { handleNavClick('about'); closeMobileMenu(); }}>O Nas</a></li>
         <li><a href="#music" class="nav-link text-white text-xl hover:text-accent-silver block py-1" bind:this={mobileNavLinks['music']} onclick={() => { handleNavClick('music'); closeMobileMenu(); }}>Muzyka</a></li>
         <li><a href="#shows" class="nav-link text-white text-xl hover:text-accent-silver block py-1" bind:this={mobileNavLinks['shows']} onclick={() => { handleNavClick('shows'); closeMobileMenu(); }}>Koncerty</a></li>
