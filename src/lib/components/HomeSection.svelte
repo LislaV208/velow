@@ -43,7 +43,8 @@
   </div>
 
   {#snippet navElem(title: string, href: string)}
-    <li><a href={href} class="nav-link text-2xl 4xl:text-3xl text-white hover:text-accent-silver">{title}</a></li>
+    <!-- <li><a href={href} class="nav-link text-3xl min-[1700px]:text-4xl min-[2000px]:text-5xl min-[3000px]:text-6xl  text-white hover:text-accent-silver">{title}</a></li> -->
+    <li><a href={href} class="nav-link text-2xl min-[1700px]:text-4xl  text-white hover:text-accent-silver">{title}</a></li>
   {/snippet}
 
   <!-- Nawigacja -->

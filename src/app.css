@@ -126,8 +126,8 @@ h1, h2, h3, h4, h5, h6 {
   /* font-size: 1.5rem; */
 }
 
-/* Usuwamy pseudo-element ::after z każdego linku */
-/* .nav-link::after {
+/* Przywracamy pseudo-element ::after dla linków w HomeSection */
+.nav-link::after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -142,10 +142,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-.nav-link.active::after {
-  width: 100%;
-  background-color: #C0C0C0;
-} */
+/* Wyłączamy pseudo-element ::after dla linków w Header */
+header .nav-link::after {
+  display: none;
+}
 
 /* Kontener nawigacji z podkreśleniem */
 .nav-container {
