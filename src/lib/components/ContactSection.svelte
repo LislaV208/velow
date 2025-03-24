@@ -87,7 +87,7 @@
 </script>
 
 <section id="contact" class="section bg-black relative">
-  <!-- <div class="absolute inset-0 bg-noise-pattern opacity-10"></div>
+  <!-- <div class="absolute inset-0  opacity-10"></div>
   <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent"></div> -->
 
   <div class="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-0 sm:opacity-100" style="background-image: url('/images/contact.webp')"></div>

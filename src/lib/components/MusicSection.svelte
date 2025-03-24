@@ -39,7 +39,7 @@
 </script>
 
 <section id="music" class="section bg-black relative">
-  <!-- <div class="absolute inset-0 bg-noise-pattern opacity-10"></div> -->
+  <!-- <div class="absolute inset-0  opacity-10"></div> -->
   <div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('/images/wizje_tlo.webp')"></div>
   <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent"></div>
   <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/70"></div>

@@ -3,7 +3,7 @@
 </script>
 
 <footer class="bg-black py-8 border-t border-gray-800 relative">
-  <div class="absolute inset-0 bg-noise-pattern opacity-10"></div>
+  <div class="absolute inset-0  opacity-10"></div>
   
   <div class="container mx-auto px-4 relative z-10">
     <div class="flex flex-col md:flex-row justify-between items-center">

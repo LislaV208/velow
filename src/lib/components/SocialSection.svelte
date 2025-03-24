@@ -67,7 +67,7 @@
 </script>
 
 <section id="social" class="section bg-gradient-to-b from-black via-gray-900 to-black py-20 relative">
-  <div class="absolute inset-0 bg-noise-pattern opacity-10"></div>
+  <div class="absolute inset-0  opacity-10"></div>
   <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent"></div>
   
   <div class="container mx-auto px-4 text-center relative z-10">
