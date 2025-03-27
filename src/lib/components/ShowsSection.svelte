@@ -34,8 +34,8 @@
       date: "30.05.2025",
       venue: "Krzywy Gryf",
       city: "Szczecin",
-      ticketLink: null,
-      ticketText: "TBA",
+      ticketLink: "https://ticketcore.org/bilety/2253/velow-godbite-wyjdzie-w-praniu.html",
+      ticketText: "BILETY",
     },
     {
       date: "14.06.2025",
