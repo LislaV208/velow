@@ -38,6 +38,13 @@
       ticketText: "BILETY",
     },
     {
+      date: "31.05.2025",
+      venue: "Green Club",
+      city: "Gdańsk",
+      ticketLink: null,
+      ticketText: "WKRÓTCE",
+    },
+    {
       date: "14.06.2025",
       venue: "Pan Gar",
       city: "Poznań",
@@ -55,13 +62,6 @@
       date: "28.06.2025",
       venue: "Klub Mechanik",
       city: "Warszawa",
-      ticketLink: null,
-      ticketText: "WKRÓTCE",
-    },
-    {
-      date: "19.07.2025",
-      venue: "Green Club",
-      city: "Gdańsk",
       ticketLink: null,
       ticketText: "WKRÓTCE",
     },
