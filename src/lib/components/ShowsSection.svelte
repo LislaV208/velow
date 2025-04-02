@@ -48,8 +48,8 @@
       date: "14.06.2025",
       venue: "Pan Gar",
       city: "Poznań",
-      ticketLink: null,
-      ticketText: "WKRÓTCE",
+      ticketLink: "https://ticketshow.pl/bilety/2265/koncert-velow-wyjdzie-w-praniu-p%C3%A8re-lachaise-poznan-pan-gar.html",
+      ticketText: "BILETY",
     },
     {
       date: "21.06.2025",
