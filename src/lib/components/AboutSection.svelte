@@ -1,111 +1,141 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  import emblaCarouselSvelte from 'embla-carousel-svelte'
-  import Autoplay from 'embla-carousel-autoplay'
-  import { ChevronLeft, ChevronRight } from 'lucide-svelte'
-  import type { EmblaCarouselType } from 'embla-carousel'
-  
+  import { onMount } from "svelte";
+  import emblaCarouselSvelte from "embla-carousel-svelte";
+  import Autoplay from "embla-carousel-autoplay";
+  import { ChevronLeft, ChevronRight } from "lucide-svelte";
+  import type { EmblaCarouselType } from "embla-carousel";
+
   let isVisible = $state(false);
   let emblaApi: EmblaCarouselType | undefined;
 
   let options = { loop: true };
-  let plugins = [Autoplay({stopOnInteraction:false, delay: 8000, stopOnFocusIn: true})]
-  
+  let plugins = [
+    Autoplay({ stopOnInteraction: false, delay: 8000, stopOnFocusIn: true }),
+  ];
+
   const onEmblaInit = (event: CustomEvent) => {
     emblaApi = event.detail;
   };
-  
+
   function scrollPrev() {
     if (emblaApi) emblaApi.scrollPrev();
   }
-  
+
   function scrollNext() {
     if (emblaApi) emblaApi.scrollNext();
   }
-  
+
   onMount(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          isVisible = true;
-        } else {
-          isVisible = false;
-        }
-      });
-    }, { threshold: 0.1 });
-    
-    const section = document.getElementById('about');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            isVisible = true;
+          } else {
+            isVisible = false;
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const section = document.getElementById("about");
     if (section) observer.observe(section);
-    
+
     return () => {
       if (section) observer.unobserve(section);
     };
   });
-  
+
   const bandMembers = [
     {
       name: "Eryk",
       role: "Wokal",
       image: "/images/eryk.webp",
-      bio: "Czasem coś murknie do mikrofonu, czasem ryknie - a czasem zapomni tekstu"
+      bio: "Czasem coś mruknie do mikrofonu, czasem ryknie - a czasem zapomni tekstu",
     },
     {
       name: "Tomek",
       role: "Gitara",
       image: "/images/tomek.webp",
-      bio: "Koleś git(arzysta), zespołowy ogarniacz. Tomek wie kto pytał"
+      bio: "Koleś git(arzysta), zespołowy ogarniacz. Tomek wie kto pytał",
     },
     {
       name: "Lisu",
       role: "Gitara",
       image: "/images/lisu.webp",
-      bio: "Za dnia cichy introwertyk, nocą zaś sceniczna bestia"
+      bio: "Za dnia cichy introwertyk, nocą zaś sceniczna bestia",
     },
     {
       name: "Wiktor",
       role: "Bas",
       image: "/images/wiktor.webp",
-      bio: "Fanki do niego lgną, ale koszulki niekoniecznie"
+      bio: "Fanki do niego lgną, ale koszulki niekoniecznie",
     },
     {
       name: "Krystian",
       role: "Perkusja",
       image: "/images/krystian.webp",
-      bio: "Jego ulubiony utwór: Metronom - 120bpm"
-    }
+      bio: "Jego ulubiony utwór: Metronom - 120bpm",
+    },
   ];
 </script>
 
-<section id="about" class="max-sm:px-1! section bg-gradient-to-b from-black via-gray-900 to-black py-20 relative">
+<section
+  id="about"
+  class="max-sm:px-1! section bg-gradient-to-b from-black via-gray-900 to-black py-20 relative"
+>
   <div class="absolute inset-0 opacity-10"></div>
-  <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent"></div>
-  
+  <div
+    class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent"
+  ></div>
+
   <div class="container mx-auto px-4 relative z-10">
-    <div class={`transition-all duration-800 delay-50 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+    <div
+      class={`transition-all duration-800 delay-50 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+    >
       <!-- <h2 class="text-5xl! sm:text-xl! section-title text-white">O Nas</h2> -->
       <h2 class="text-5xl! section-title text-white">O Nas</h2>
-      
+
       <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16"> -->
       <div class="flex max-sm:flex-col flex-row gap-10 mb-16">
         <div class="flex-2">
           <p class="text-gray-300 mb-6 max-sm:text-md md:text-lg">
-            Velow to powstały w roku 2021 zespół, muzycznie będący w klimatach rocka alternatywnego. Po pierwszych, bardzo intensywnych dwóch latach działalności, miało miejsce nasze pierwsze wyjście z mroku z naszym debiutanckim albumem pod tytułem “Wizje”, który przyjął się bardzo dobrze w środowisku. Razem z premierą, w 2023 wyruszyliśmy w trasę “Wizje Tour”, odwiedzając takie miasta jak Szczecin, Gdańsk, Poznań. Nasza muzyka to pewna opowieść. To enigmatyczne teksty, które w połączeniu z energiczną muzyką tworzą mieszankę wybuchową. 
+            Velow to powstały w roku 2021 zespół, muzycznie będący w klimatach
+            rocka alternatywnego. Po pierwszych, bardzo intensywnych dwóch
+            latach działalności, miało miejsce nasze pierwsze wyjście z mroku z
+            naszym debiutanckim albumem pod tytułem “Wizje”, który przyjął się
+            bardzo dobrze w środowisku. Razem z premierą, w 2023 wyruszyliśmy w
+            trasę “Wizje Tour”, odwiedzając takie miasta jak Szczecin, Gdańsk,
+            Poznań. Nasza muzyka to pewna opowieść. To enigmatyczne teksty,
+            które w połączeniu z energiczną muzyką tworzą mieszankę wybuchową.
           </p>
           <p class="text-gray-300 mb-6 max-sm:text-md md:text-lg">
-            Mamy za sobą dwukrotny występ na Szczecińskich Juwenaliach, w naszej dotychczasowej karierze graliśmy między innymi przed takimi zespołami jak: Lady Pank, Kult, Enej, Organek
+            Mamy za sobą dwukrotny występ na Szczecińskich Juwenaliach, w naszej
+            dotychczasowej karierze graliśmy między innymi przed takimi
+            zespołami jak: Lady Pank, Kult, Enej, Organek
           </p>
-          
-          <blockquote class="border-l-4 border-accent-silver pl-4 py-2 my-6 bg-black/30 rounded-r-lg">
+
+          <blockquote
+            class="border-l-4 border-accent-silver pl-4 py-2 my-6 bg-black/30 rounded-r-lg"
+          >
             <p class="text-gray-200 italic sm:text-md md:text-lg">
-              "Jeśli takie są "Wizje" przyszłości polskiego rocka, to jest dobrze, naprawdę dobrze!" 
-              <span class="text-accent-silver font-semibold block mt-2">- EskaROCK</span>
+              "Jeśli takie są "Wizje" przyszłości polskiego rocka, to jest
+              dobrze, naprawdę dobrze!"
+              <span class="text-accent-silver font-semibold block mt-2"
+                >- EskaROCK</span
+              >
             </p>
             <p class="text-gray-200 italic sm:text-md md:text-lg mt-4">
-              "Velow bywają i czadowi (przewrotna Smutna Piosenka), i refleksyjni (Mimo Strat, Miasto pełne krzyku). I w każdym wcieleniu im do twarzy" 
-              <span class="text-accent-silver font-semibold block mt-2">- TerazROCK</span>
+              "Velow bywają i czadowi (przewrotna Smutna Piosenka), i
+              refleksyjni (Mimo Strat, Miasto pełne krzyku). I w każdym
+              wcieleniu im do twarzy"
+              <span class="text-accent-silver font-semibold block mt-2"
+                >- TerazROCK</span
+              >
             </p>
           </blockquote>
-          
+
           <div class="mt-8 flex justify-center w-full">
             <a href="#music" class="btn hover:text-black">
               Posłuchaj naszej muzyki
@@ -113,17 +143,40 @@
           </div>
         </div>
         <!-- Usuwam ziarno z obrazu poprzez dodanie filtrów CSS -->
-<!-- <img src="/images/eryk.JPG" alt="Eryk" class="w-100 h-100 object-cover filter blur-[0.6px]"> -->
+        <!-- <img src="/images/eryk.JPG" alt="Eryk" class="w-100 h-100 object-cover filter blur-[0.6px]"> -->
 
-        <div class="flex-1 embla relative" use:emblaCarouselSvelte="{{options, plugins}}" onemblaInit={onEmblaInit}>
-            <div class="embla__container">
-              {#each bandMembers as member, i}
-              <div class="{i < bandMembers.length - 1 ? 'mr-5' : 'mr-0'} embla__slide card p-5 rounded-lg bg-black/50 ">
-                <div class="relative mb-4 overflow-hidden rounded-lg aspect-square">
-                  <img src={member.image} alt={member.name} class="w-full h-full object-cover grayscale"
-                  style="object-position: center {member.name === 'Eryk' ? '70%' : member.name === 'Lisu' ? '0%': member.name === 'Wiktor' ? '30%' : member.name === 'Krystian' ? '30%' : '50%'} "
-                  >
-                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+        <div
+          class="flex-1 embla relative"
+          use:emblaCarouselSvelte={{ options, plugins }}
+          onemblaInit={onEmblaInit}
+        >
+          <div class="embla__container">
+            {#each bandMembers as member, i}
+              <div
+                class="{i < bandMembers.length - 1
+                  ? 'mr-5'
+                  : 'mr-0'} embla__slide card p-5 rounded-lg bg-black/50"
+              >
+                <div
+                  class="relative mb-4 overflow-hidden rounded-lg aspect-square"
+                >
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    class="w-full h-full object-cover grayscale"
+                    style="object-position: center {member.name === 'Eryk'
+                      ? '70%'
+                      : member.name === 'Lisu'
+                        ? '0%'
+                        : member.name === 'Wiktor'
+                          ? '30%'
+                          : member.name === 'Krystian'
+                            ? '30%'
+                            : '50%'} "
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
+                  ></div>
                   <div class="absolute bottom-0 left-0 w-full p-3">
                     <h4 class="text-xl text-white">{member.name}</h4>
                     <p class="text-sm">{member.role}</p>
@@ -132,22 +185,24 @@
                 <p class="text-gray-400 text-sm">{member.bio}</p>
               </div>
             {/each}
-            </div>
-            
-            <div class="flex justify-center mt-4 space-x-4">
-              <button 
-                class="w-10 h-10 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white border border-white/20 transition-all duration-300 hover:bg-black/50 hover:border-white/40 focus:outline-none cursor-pointer" 
-                onclick={scrollPrev}
-                aria-label="Poprzednie zdjęcie">
-                <ChevronLeft size={20} />
-              </button>
-              <button 
-                class="w-10 h-10 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white border border-white/20 transition-all duration-300 hover:bg-black/50 hover:border-white/40 focus:outline-none cursor-pointer" 
-                onclick={scrollNext}
-                aria-label="Następne zdjęcie">
-                <ChevronRight size={20} />
-              </button>
-            </div>
+          </div>
+
+          <div class="flex justify-center mt-4 space-x-4">
+            <button
+              class="w-10 h-10 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white border border-white/20 transition-all duration-300 hover:bg-black/50 hover:border-white/40 focus:outline-none cursor-pointer"
+              onclick={scrollPrev}
+              aria-label="Poprzednie zdjęcie"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button
+              class="w-10 h-10 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white border border-white/20 transition-all duration-300 hover:bg-black/50 hover:border-white/40 focus:outline-none cursor-pointer"
+              onclick={scrollNext}
+              aria-label="Następne zdjęcie"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
           <!-- </div> -->
           <!-- <div class="absolute -inset-4 bg-gradient-to-r from-accent-red to-transparent opacity-10 blur-lg"></div>
           <img src="/images/band-about.webp" alt="Zespół Velow" class="w-full h-auto rounded-lg shadow-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-700">
@@ -167,12 +222,9 @@
               </div>
             {/each}
           </div> -->
-          
         </div>
       </div>
 
-
-      
       <!-- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {#each bandMembers as member, i}
           <div class="card p-5 rounded-lg bg-black/50 backdrop-blur-sm" style="transition-delay: {i * 100}ms">
@@ -190,5 +242,7 @@
       </div> -->
     </div>
   </div>
-  <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent"></div>
+  <div
+    class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent"
+  ></div>
 </section>
