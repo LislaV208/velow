@@ -32,6 +32,7 @@
       city: "Goleniów",
       ticketLink: "https://www.facebook.com/events/3607994556164757",
       ticketText: "Wstęp free",
+      facebookLink: null,
     },
     {
       date: "30.05.2025",
@@ -40,34 +41,42 @@
       ticketLink:
         "https://ticketcore.org/bilety/2253/velow-godbite-wyjdzie-w-praniu.html",
       ticketText: "BILETY",
+      facebookLink: "https://www.facebook.com/events/1038860471635924",
     },
     {
       date: "31.05.2025",
       venue: "Green Club",
       city: "Gdańsk",
-      ticketLink: null,
-      ticketText: "WKRÓTCE",
+      ticketLink: "https://www.facebook.com/events/1189653699554584",
+      ticketText: "WSTĘP FREE",
+      facebookLink: null,
     },
     {
       date: "14.06.2025",
       venue: "Pan Gar",
       city: "Poznań",
-      ticketLink: null,
-      ticketText: "WKRÓTCE",
+      ticketLink:
+        "https://kicket.com/wydarzenia/velow--25697?eventId=304833&allLocations=true",
+      ticketText: "BILETY",
+      facebookLink: "https://www.facebook.com/events/600035736404285",
     },
     {
       date: "21.06.2025",
       venue: "Klub Alive",
       city: "Wrocław",
-      ticketLink: null,
-      ticketText: "WKRÓTCE",
+      ticketLink:
+        "https://kicket.com/wydarzenia/velow--25697?eventId=304802&allLocations=true",
+      ticketText: "BILETY",
+      facebookLink: "https://www.facebook.com/events/1707434809982983",
     },
     {
       date: "28.06.2025",
       venue: "Klub Mechanik",
       city: "Warszawa",
-      ticketLink: null,
-      ticketText: "WKRÓTCE",
+      ticketLink:
+        "https://kicket.com/wydarzenia/velow--25697?eventId=304790&allLocations=true",
+      ticketText: "BILETY",
+      facebookLink: "https://www.facebook.com/events/698823232655813",
     },
     // {
     //   date: "18.11.2025",
@@ -150,7 +159,16 @@
                 >
               </div>
             </div>
-            <div class="mt-auto pt-4 flex justify-end items-center">
+            <div class="mt-auto pt-4 flex justify-end items-center gap-3">
+              {#if show.facebookLink}
+                <a
+                  href={show.facebookLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn text-sm py-2 px-4 border-blue-500 text-blue-500 hover:text-black"
+                  >Facebook</a
+                >
+              {/if}
               <a
                 href={show.ticketLink}
                 target="_blank"
