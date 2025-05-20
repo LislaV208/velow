@@ -45,10 +45,10 @@
     },
     {
       date: "31.05.2025",
-      venue: "Green Club",
+      venue: "Pro'Rock Pub",
       city: "Gdańsk",
       ticketLink: "https://www.facebook.com/events/1189653699554584",
-      ticketText: "WSTĘP FREE",
+      ticketText: "FACEBOOK",
       facebookLink: null,
     },
     {
