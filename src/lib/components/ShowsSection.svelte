@@ -27,40 +27,6 @@
 
   const upcomingShows = [
     {
-      date: "11.04.2025\n12.04.2025",
-      venue: "Rampa - Kultura i Twierdza Design",
-      city: "Goleniów",
-      ticketLink: "https://www.facebook.com/events/3607994556164757",
-      ticketText: "Wstęp free",
-      facebookLink: null,
-    },
-    {
-      date: "30.05.2025",
-      venue: "Krzywy Gryf",
-      city: "Szczecin",
-      ticketLink:
-        "https://ticketcore.org/bilety/2253/velow-godbite-wyjdzie-w-praniu.html",
-      ticketText: "BILETY",
-      facebookLink: "https://www.facebook.com/events/1038860471635924",
-    },
-    {
-      date: "31.05.2025",
-      venue: "Pro'Rock Pub",
-      city: "Gdańsk",
-      ticketLink: "https://www.facebook.com/events/1189653699554584",
-      ticketText: "FACEBOOK",
-      facebookLink: null,
-    },
-    {
-      date: "14.06.2025",
-      venue: "Pan Gar",
-      city: "Poznań",
-      ticketLink:
-        "https://kicket.com/wydarzenia/velow--25697?eventId=304833&allLocations=true",
-      ticketText: "BILETY",
-      facebookLink: "https://www.facebook.com/events/600035736404285",
-    },
-    {
       date: "21.06.2025",
       venue: "Klub Alive",
       city: "Wrocław",
@@ -77,6 +43,14 @@
         "https://kicket.com/wydarzenia/velow--25697?eventId=304790&allLocations=true",
       ticketText: "BILETY",
       facebookLink: "https://www.facebook.com/events/698823232655813",
+    },
+    {
+      date: "25.07.2025\n26.07.2025",
+      venue: "Męskie Granie",
+      city: "Szczecin",
+      ticketLink: "https://www.ebilet.pl/muzyka/festiwale/meskie-granie",
+      ticketText: "BILETY",
+      facebookLink: "https://www.facebook.com/events/945565057479160",
     },
     // {
     //   date: "18.11.2025",
